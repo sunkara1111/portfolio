@@ -109,7 +109,7 @@ const About = () => {
         <p className="font-mono text-xs uppercase tracking-[0.28em] text-neon-purple">
           Education
         </p>
-        <ul className="mt-6 grid gap-4 md:grid-cols-2">
+        <ul className="mt-6 grid gap-4">
           {EDUCATION.map((item) => (
             <li key={item.credential} className="neon-card p-6">
               <p className="font-mono text-xs uppercase tracking-wider text-muted">{item.dates}</p>

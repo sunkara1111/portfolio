@@ -43,13 +43,6 @@ export const EXPERIENCE = [
     current: false,
   },
   {
-    role: 'Program Analyst',
-    company: 'Cognizant',
-    location: 'Chennai, India (Remote)',
-    dates: 'Aug 2020 – Mar 2023',
-    current: false,
-  },
-  {
     role: 'Intern – Industrial Automation & Controls',
     company: 'Andhra Pradesh State Skill Development Corporation (APSSDC)',
     location: 'Andhra Pradesh, India',
@@ -64,11 +57,6 @@ export const EDUCATION = [
     credential: 'Master of Science (M.S.) in Computer Science',
     dates: 'Sep 2023 – May 2025',
     detail: 'GPA: 3.55 / 4.0',
-  },
-  {
-    school: 'Tirumala Engineering College, Andhra Pradesh, India',
-    credential: 'B.Tech in Electrical, Electronics & Communication Engineering',
-    dates: '2016 – 2020',
   },
 ]
 
