@@ -11,7 +11,7 @@ Public branding is the name, role, and GitHub / LinkedIn links only. Do not add 
 **https://sunkara1111.github.io/portfolio/**
 
 - GitHub: [github.com/sunkara1111](https://github.com/sunkara1111)
-- LinkedIn: [linkedin.com/in/dineshgopisunkara](https://www.linkedin.com/in/dineshgopisunkara)
+- LinkedIn: [linkedin.com/in/sunkara-dineshgopi-86464919b](https://www.linkedin.com/in/sunkara-dineshgopi-86464919b)
 
 ## Tech Stack
 
