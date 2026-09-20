@@ -9,8 +9,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-gray-400">
-              Founded & built by{' '}
-              <span className="text-white font-medium">Dineshgopi Sunkara</span>
+              <span className="text-white font-medium">Dinesh Gopi Sunkara</span>
+            </p>
+            <p className="text-gray-500 text-sm mt-1">
+              Automation Engineer | Master&apos;s in Computer Science, Pace University
             </p>
             <p className="text-gray-500 text-sm mt-1">
               © {currentYear} All rights reserved

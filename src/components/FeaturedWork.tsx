@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     name: 'AdForge',
-    description: 'AI social ad pack generator for Reels, TikTok, and Shorts. Complete ad creation workflow powered by OpenAI.',
+    description: 'Automated social media ad generator for Reels, TikTok, and Shorts. Streamlines content creation workflows using AI-powered templates and OpenAI integration.',
     liveUrl: 'https://adforge-sunkara.vercel.app',
     repoUrl: 'https://github.com/sunkara1111/adforge',
     stack: ['Next.js', 'TypeScript', 'OpenAI', 'Stripe'],
@@ -13,7 +13,7 @@ const projects = [
   },
   {
     name: 'Dinesh AI Fund',
-    description: '7-agent investment research floor running autonomous market analysis. Paper trading and research only — includes clear disclaimers.',
+    description: 'Multi-agent investment research system demonstrating autonomous market analysis workflows. Educational research project for paper trading and analysis automation.',
     liveUrl: 'https://sunkara1111.github.io/ai-hedge-fund/',
     repoUrl: 'https://github.com/sunkara1111/ai-hedge-fund',
     stack: ['Python', 'LangGraph', 'yfinance'],
@@ -22,7 +22,7 @@ const projects = [
   },
   {
     name: 'DGS AI',
-    description: 'Trading-first humanoid vision — social, work product, and autonomous capabilities combined.',
+    description: 'Experimental AI system exploring computer vision and autonomous task execution capabilities. Research project combining multiple AI technologies.',
     liveUrl: 'https://sunkara1111.github.io/dgs-ai/',
     repoUrl: 'https://github.com/sunkara1111/dgs-ai',
     stack: ['Research', 'Vision'],
@@ -30,7 +30,7 @@ const projects = [
   },
   {
     name: 'Client Kickoff System',
-    description: 'Free, open-source client onboarding and kickoff framework. Streamline project starts.',
+    description: 'Free, open-source client onboarding and kickoff framework. Automates project initialization and client communication workflows.',
     liveUrl: 'https://github.com/sunkara1111/client-kickoff-system-free',
     repoUrl: 'https://github.com/sunkara1111/client-kickoff-system-free',
     stack: ['Open Source', 'Framework'],
@@ -53,7 +53,7 @@ export default function FeaturedWork() {
             <span className="gradient-text">Selected Work</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            Products shipping to production
+            Automation tools and AI-assisted systems
           </p>
         </motion.div>
 

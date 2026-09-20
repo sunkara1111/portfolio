@@ -13,10 +13,10 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Let&apos;s Build Together</span>
+            <span className="gradient-text">Let&apos;s Connect</span>
           </h2>
           <p className="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">
-            Interested in collaborating on AI products, discussing multi-agent systems, or exploring new opportunities? Reach out.
+            Interested in discussing automation engineering, AI-assisted tools, or exploring collaboration opportunities? Reach out.
           </p>
 
           <div className="flex flex-wrap gap-6 justify-center">

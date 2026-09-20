@@ -1,12 +1,12 @@
-# Portfolio — Dineshgopi Sunkara
+# Portfolio — Dinesh Gopi Sunkara
 
-A cinematic, founder-grade portfolio website showcasing AI products and multi-agent systems.
+A portfolio website showcasing automation engineering projects and AI-assisted tools.
 
 **Live Site:** https://sunkara1111.github.io/portfolio/
 
 ## Overview
 
-This is a production-ready static portfolio built with Next.js, featuring:
+This is a static portfolio built with Next.js, featuring:
 
 - 🎨 Dark, premium aesthetic with violet/cyan accent gradients
 - ✨ Smooth animations powered by Framer Motion
@@ -18,18 +18,18 @@ This is a production-ready static portfolio built with Next.js, featuring:
 ## Featured Projects
 
 ### 1. **AdForge**
-AI social ad pack generator for Reels, TikTok, and Shorts.
+Automated social media ad generator for Reels, TikTok, and Shorts.
 - **Live:** https://adforge-sunkara.vercel.app
 - **Stack:** Next.js, TypeScript, OpenAI, Stripe
 
 ### 2. **Dinesh AI Fund**
-7-agent investment research floor with autonomous market analysis.
+Multi-agent investment research system demonstrating autonomous market analysis workflows.
 - **Live:** https://sunkara1111.github.io/ai-hedge-fund/
 - **Stack:** Python, LangGraph, yfinance
-- ⚠️ Paper trading and research only
+- ⚠️ Educational research project for paper trading and analysis automation
 
 ### 3. **DGS AI**
-Trading-first humanoid vision combining social, work product, and autonomous capabilities.
+Experimental AI system exploring computer vision and autonomous task execution capabilities.
 - **Live:** https://sunkara1111.github.io/dgs-ai/
 
 ### 4. **Client Kickoff System**
@@ -120,17 +120,17 @@ portfolio/
 ## Design Principles
 
 - **Cinematic Experience:** Smooth animations and depth effects create an immersive feel
-- **Founder-Grade:** Professional aesthetic that conveys technical depth and product focus
+- **Professional:** Clean aesthetic that conveys technical depth and practical focus
 - **Content-First:** Clear hierarchy with project details, live links, and repositories
 - **Performance:** Static generation ensures fast load times worldwide
 - **Accessibility:** WCAG-compliant contrast ratios and semantic markup
 
 ## Contact
 
-**Dineshgopi Sunkara**
+**Dinesh Gopi Sunkara**
 - GitHub: [@sunkara1111](https://github.com/sunkara1111)
 - LinkedIn: [dineshgopisunkara](https://www.linkedin.com/in/dineshgopisunkara)
 
 ---
 
-**Founded & built by Dineshgopi Sunkara**
+**Automation Engineer | Master's in Computer Science, Pace University**

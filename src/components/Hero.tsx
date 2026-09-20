@@ -45,7 +45,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Founder · Product Builder
+            Automation Engineer · Master&apos;s in CS, Pace University
           </motion.p>
           
           <motion.h1
@@ -54,7 +54,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <span className="gradient-text">Dineshgopi Sunkara</span>
+            <span className="gradient-text">Dinesh Gopi Sunkara</span>
           </motion.h1>
           
           <motion.p
@@ -63,10 +63,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Building AI products that ship —{' '}
-            <span className="text-violet-400">multi-agent systems</span>,{' '}
-            <span className="text-cyan-400">ads</span>, and{' '}
-            <span className="text-violet-400">markets</span>
+            Building practical and accessible{' '}
+            <span className="text-violet-400">automation</span> and{' '}
+            <span className="text-cyan-400">AI-assisted tools</span>
           </motion.p>
 
           <motion.div
