@@ -7,18 +7,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        'background': '#07111f',
-        'surface': '#0d1b2e',
-        'surface-light': '#13263d',
-        'text': '#f4f7fb',
-        'muted': '#9eafc3',
-        'primary': '#4da3ff',
-        'primary-bright': '#79bdff',
+        background: '#050510',
+        surface: '#0b0d1f',
+        text: '#f4f7fb',
+        muted: '#9aa3b8',
+        'neon-cyan': '#5eead4',
+        'neon-purple': '#c084fc',
+        'neon-pink': '#e879f9',
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
-        'heading': ['Space Grotesk', 'system-ui', 'sans-serif'],
-        'mono': ['JetBrains Mono', 'Consolas', 'monospace'],
+        sans: ['Outfit', 'system-ui', 'sans-serif'],
+        display: ['Playfair Display', 'Georgia', 'serif'],
+        mono: ['JetBrains Mono', 'Consolas', 'monospace'],
       },
     },
   },

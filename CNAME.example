@@ -1,0 +1,7 @@
+# GitHub Pages custom-domain template.
+# Do not invent a hostname. When the real domain is ready:
+#   1. Copy this file to public/CNAME
+#   2. Replace the placeholder line with only that hostname (no protocol, no path)
+#   3. Follow the checklist in README.md
+#
+# YOUR-DOMAIN.EXAMPLE
