@@ -5,7 +5,7 @@ import { GitHubIcon } from './icons'
 const ProjectArt = ({ art, accent }) => {
   const stroke = 'rgba(255,255,255,0.85)'
   return (
-    <div className={`relative h-44 overflow-hidden bg-gradient-to-br ${accent}`}>
+    <div className={`project-gloss relative h-44 overflow-hidden bg-gradient-to-br ${accent}`}>
       <div className="absolute inset-0 bg-[#050510]/20" />
       <svg className="absolute inset-0 h-full w-full" viewBox="0 0 320 176" fill="none" aria-hidden="true">
         {art === 'wave' && (
@@ -126,7 +126,7 @@ const ProjectActions = ({ project }) => (
 )
 
 export const ProjectCard = ({ project, featured = false }) => (
-  <article className={`neon-card flex h-full flex-col overflow-hidden ${featured ? 'shadow-neon' : ''}`}>
+  <article className={`neon-card project-card-3d flex h-full flex-col overflow-hidden ${featured ? 'shadow-neon' : ''}`}>
     <ProjectArt art={project.art} accent={project.accent} />
     <div className="flex flex-1 flex-col p-6">
       <div className="mb-3 flex items-start justify-between gap-3">
@@ -150,7 +150,7 @@ export const ProjectCard = ({ project, featured = false }) => (
 )
 
 const VisualCard = ({ project, featured }) => (
-  <article className={`neon-card overflow-hidden ${featured ? 'shadow-neon' : ''}`}>
+  <article className={`neon-card project-card-3d overflow-hidden ${featured ? 'shadow-neon' : ''}`}>
     <ProjectArt art={project.art} accent={project.accent} />
     <div className="p-5">
       <div className="mb-2 flex items-start justify-between gap-3">
@@ -220,7 +220,7 @@ const Coverflow = ({ projects }) => {
               aria-current={offset === 0 ? 'true' : undefined}
               className="absolute left-1/2 top-4 w-[min(86%,300px)] origin-center cursor-pointer text-left transition-transform duration-500"
               style={{
-                transform: `translateX(-50%) translateX(${offset * 215}px) rotateY(${offset * -30}deg) translateZ(${offset === 0 ? 80 : -50}px) scale(${offset === 0 ? 1 : 0.88})`,
+                transform: `translateX(-50%) translateX(${offset * 228}px) rotateY(${offset * -38}deg) translateZ(${offset === 0 ? 110 : -70}px) scale(${offset === 0 ? 1.04 : 0.86})`,
                 zIndex: 20 - abs,
                 opacity: visible ? (abs === 2 ? 0.4 : 1) : 0,
                 pointerEvents: visible ? 'auto' : 'none',

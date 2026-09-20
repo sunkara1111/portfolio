@@ -1,5 +1,6 @@
 import React from 'react'
 import { SITE } from '../data/site'
+import PortraitTilt from './PortraitTilt'
 
 const Hero = () => {
   return (
@@ -46,20 +47,22 @@ const Hero = () => {
 
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-cyan-400/20 via-fuchsia-500/10 to-transparent blur-2xl" />
-          <figure className="portrait-frame relative mx-auto aspect-[4/5] max-w-[380px] overflow-hidden lg:max-w-[440px]">
-            <img
-              src={SITE.portrait}
-              alt={`${SITE.name}, ${SITE.shortTitle}`}
-              width="720"
-              height="1280"
-              className="h-full w-full object-cover object-[center_18%]"
-            />
-            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050510] via-[#050510]/40 to-transparent p-5">
-              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-neon-cyan">
-                Controls · Automation
-              </p>
-            </figcaption>
-          </figure>
+          <PortraitTilt className="relative mx-auto max-w-[380px] lg:max-w-[440px]">
+            <figure className="portrait-frame relative mx-auto aspect-[4/5] overflow-hidden">
+              <img
+                src={SITE.portrait}
+                alt={`${SITE.name}, ${SITE.shortTitle}`}
+                width="720"
+                height="1280"
+                className="h-full w-full object-cover object-[center_18%]"
+              />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050510] via-[#050510]/40 to-transparent p-5">
+                <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-neon-cyan">
+                  Controls · Automation
+                </p>
+              </figcaption>
+            </figure>
+          </PortraitTilt>
         </div>
       </div>
     </section>

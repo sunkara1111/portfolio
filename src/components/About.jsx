@@ -1,5 +1,6 @@
 import React from 'react'
 import { ABOUT_ORBITS, EXPERIENCE, SITE } from '../data/site'
+import PortraitTilt from './PortraitTilt'
 
 const facts = [
   { label: 'Current role', value: `${EXPERIENCE[0].role} · ${EXPERIENCE[0].company}` },
@@ -67,20 +68,22 @@ const About = () => {
               {orbit.label}
             </span>
           ))}
-          <figure className="portrait-frame relative mx-auto aspect-[4/5] overflow-hidden">
-            <img
-              src={SITE.portraitAbout}
-              alt={`${SITE.name} on the Brooklyn Bridge`}
-              width="720"
-              height="1280"
-              className="h-full w-full object-cover object-[center_18%]"
-            />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050510] to-transparent px-6 py-6 text-center">
-              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/80">
-                Developer · Controls · Automation
-              </p>
-            </div>
-          </figure>
+          <PortraitTilt>
+            <figure className="portrait-frame relative mx-auto aspect-[4/5] overflow-hidden">
+              <img
+                src={SITE.portraitAbout}
+                alt={`${SITE.name} on the Brooklyn Bridge`}
+                width="720"
+                height="1280"
+                className="h-full w-full object-cover object-[center_18%]"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050510] to-transparent px-6 py-6 text-center">
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/80">
+                  Developer · Controls · Automation
+                </p>
+              </div>
+            </figure>
+          </PortraitTilt>
         </div>
       </div>
 
