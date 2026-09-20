@@ -42,7 +42,7 @@ export const PROJECTS = [
     description:
       'F-1 / CPT / OPT / STEM OPT compliance organizer for international students in the United States. Tracks visa and work-authorization clocks so the next action is clear.',
     tags: ['F-1', 'CPT', 'OPT', 'STEM OPT'],
-    liveUrl: 'https://temporary-prompt-pavo-7vphl3a.vercel.app/',
+    liveUrl: 'https://statuspass-web.vercel.app/',
     githubUrl: 'https://github.com/sunkara1111/statuspass',
     status: 'live',
     disclaimer: 'Not a law firm or DSO',

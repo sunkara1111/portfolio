@@ -24,7 +24,7 @@ Public branding is the name, role, and GitHub / LinkedIn links only. Do not add 
 ## Featured Projects
 
 1. **Pilot** — Communication and productivity hub ([Live](https://get-pilot-app.netlify.app/) | [Reply](https://get-pilot-app.netlify.app/tools/reply) | [GitHub](https://github.com/sunkara1111/pilot))
-2. **StatusPass** — F-1 / CPT / OPT / STEM OPT organizer ([Live](https://temporary-prompt-pavo-7vphl3a.vercel.app/) | [GitHub](https://github.com/sunkara1111/statuspass))
+2. **StatusPass** — F-1 / CPT / OPT / STEM OPT organizer ([Live](https://statuspass-web.vercel.app/) | [GitHub](https://github.com/sunkara1111/statuspass))
 3. **AdForge** — AI-powered advertising platform ([Live](https://adforge-sunkara.vercel.app/))
 4. **DGS AI** — Intelligent assistant platform ([Live](https://sunkara1111.github.io/dgs-ai/) | [GitHub](https://github.com/sunkara1111/dgs-ai))
 5. **AI Fund** — Experimental hedge fund research ([Live](https://sunkara1111.github.io/ai-hedge-fund/) | [GitHub](https://github.com/sunkara1111/ai-hedge-fund))
