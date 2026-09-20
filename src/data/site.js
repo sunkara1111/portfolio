@@ -7,8 +7,9 @@ export const SITE = {
   tagline: 'Building at the intersection of control systems & intelligent software.',
   summary:
     'I design reliable industrial controls, automation, and AI-assisted tools that turn complex workflows into systems you can trust.',
-  education: "Master's degree in Computer Science",
+  education: 'M.S. in Computer Science',
   university: 'Pace University',
+  resumeLabel: 'Latest resume',
   github: 'https://github.com/sunkara1111',
   linkedin: 'https://www.linkedin.com/in/sunkara-dineshgopi-86464919b',
   email: 'dineshgopi.sunkara@gmail.com',
@@ -25,9 +26,49 @@ export const EXPERIENCE = [
   {
     role: 'Automation Engineer',
     company: 'Jubilant HollisterStier',
-    location: 'Spokane, WA',
+    location: 'Spokane, WA (On-Site)',
     dates: 'Jun 2026 – Present',
     current: true,
+    highlights: [
+      'Develop custom Ignition SCADA modules using Python and JavaScript scripting for vision-sensor data and operator dashboards.',
+      'Design an automated quality-control system integrating Rockwell PLCs with AVEVA SCADA.',
+      'Direct integration, programming, and troubleshooting of control systems with sterile fill-finish lines.',
+    ],
+  },
+  {
+    role: 'Software Engineer',
+    company: 'Source Sphere LLC',
+    location: 'Edison, NJ (Hybrid)',
+    dates: 'Nov 2025 – Jun 2026',
+    current: false,
+  },
+  {
+    role: 'Program Analyst',
+    company: 'Cognizant',
+    location: 'Chennai, India (Remote)',
+    dates: 'Aug 2020 – Mar 2023',
+    current: false,
+  },
+  {
+    role: 'Intern – Industrial Automation & Controls',
+    company: 'Andhra Pradesh State Skill Development Corporation (APSSDC)',
+    location: 'Andhra Pradesh, India',
+    dates: 'Apr 2019 – Apr 2020',
+    current: false,
+  },
+]
+
+export const EDUCATION = [
+  {
+    school: 'Pace University – Seidenberg School of CS & IS, New York, NY',
+    credential: 'Master of Science (M.S.) in Computer Science',
+    dates: 'Sep 2023 – May 2025',
+    detail: 'GPA: 3.55 / 4.0',
+  },
+  {
+    school: 'Tirumala Engineering College, Andhra Pradesh, India',
+    credential: 'B.Tech in Electrical, Electronics & Communication Engineering',
+    dates: '2016 – 2020',
   },
 ]
 

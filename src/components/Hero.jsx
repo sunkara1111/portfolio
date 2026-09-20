@@ -43,6 +43,9 @@ const Hero = () => {
               Let&apos;s Talk
             </a>
           </div>
+          <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
+            {SITE.resumeLabel} · currently working
+          </p>
         </div>
 
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
