@@ -297,6 +297,34 @@ const Projects = () => {
             </div>
           ))}
         </div>
+
+        <nav aria-label="Live projects" className="mx-auto mt-12 max-w-3xl text-center">
+          <p className="mb-3 font-mono text-xs uppercase tracking-[0.28em] text-muted">
+            All live projects
+          </p>
+          <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">
+            {PROJECTS.map((project) => (
+              <li key={project.id}>
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 underline-offset-4 transition-colors hover:text-neon-cyan hover:underline"
+                >
+                  {project.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4">
+            <a
+              href={`${import.meta.env.BASE_URL}projects.html`}
+              className="text-sm text-neon-cyan underline-offset-4 hover:underline"
+            >
+              Full project directory
+            </a>
+          </p>
+        </nav>
       </div>
     </section>
   )
