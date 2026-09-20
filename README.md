@@ -22,7 +22,7 @@ Modern portfolio showcasing automation systems, AI tools, and software engineeri
 2. **AI Research Floor** — Experimental hedge fund research system ([Live](https://sunkara1111.github.io/ai-hedge-fund/) | [GitHub](https://github.com/sunkara1111/ai-hedge-fund))
 3. **DGS AI** — Intelligent assistant platform ([Live](https://sunkara1111.github.io/dgs-ai/) | [GitHub](https://github.com/sunkara1111/dgs-ai))
 4. **Client Kickoff System** — Streamlined onboarding automation ([GitHub](https://github.com/sunkara1111/client-kickoff-system-free))
-5. **Aetherline** — Next-gen automation control system ([Coming Soon](https://sunkara1111.github.io/aetherline/))
+5. **Aetherline** — Next-gen automation control system ([Live](https://sunkara1111.github.io/aetherline/) | [GitHub](https://github.com/sunkara1111/aetherline))
 
 ## 💻 Development
 

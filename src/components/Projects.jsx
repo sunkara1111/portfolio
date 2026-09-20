@@ -71,16 +71,23 @@ const ProjectCard = ({ project }) => {
         <span className="font-mono text-xs text-muted">
           {String(project.id).padStart(2, '0')}
         </span>
-        {project.status === 'in-development' && (
-          <span className="px-3 py-1 bg-surface-light border border-[var(--border)] rounded-lg text-xs font-mono text-muted">
-            In development
-          </span>
-        )}
-        {project.disclaimer && (
-          <span className="px-3 py-1 bg-surface-light border border-[var(--border)] rounded-lg text-xs font-mono text-muted">
-            {project.disclaimer}
-          </span>
-        )}
+        <div className="flex items-center gap-2">
+          {project.status === 'live' && (
+            <span className="px-3 py-1 bg-primary/10 border border-primary/30 rounded-lg text-xs font-mono text-primary">
+              Live
+            </span>
+          )}
+          {project.status === 'in-development' && (
+            <span className="px-3 py-1 bg-surface-light border border-[var(--border)] rounded-lg text-xs font-mono text-muted">
+              In development
+            </span>
+          )}
+          {project.disclaimer && (
+            <span className="px-3 py-1 bg-surface-light border border-[var(--border)] rounded-lg text-xs font-mono text-muted">
+              {project.disclaimer}
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Title */}
