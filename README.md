@@ -1,58 +1,49 @@
 # Portfolio — Dineshgopi Sunkara
 
-Modern, responsive portfolio showcasing automation engineering projects and AI-assisted tools.
+**Senior Controls Engineer · Automation Engineer**
 
-🔗 **Live Site:** https://sunkara1111.github.io/portfolio/
+Modern portfolio showcasing automation systems, AI tools, and software engineering projects.
 
-## About
+## 🚀 Live Site
 
-Personal portfolio for **Dineshgopi Sunkara**, Automation Engineer with a Master's degree in Computer Science from Pace University. Building practical and accessible automation and AI-assisted tools.
+**https://sunkara1111.github.io/portfolio/**
 
-## Featured Projects
+## 🛠️ Tech Stack
 
-- **AdForge** — AI social ad pack generator (Reels/TikTok/Shorts)
-- **AI Research Floor** — Educational multi-agent market analysis
-- **DGS AI** — AI-powered assistant platform
-- **Client Kickoff System** — Free client onboarding automation
+- **React** — UI framework
+- **Vite** — Build tool
+- **Tailwind CSS** — Styling
+- **GitHub Pages** — Hosting
+- **GitHub Actions** — CI/CD
 
-## Tech Stack
+## 📦 Featured Projects
 
-- **Framework:** Next.js 14 with App Router
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Deployment:** GitHub Pages (static export)
-- **Animations:** CSS animations + Framer Motion
+1. **AdForge** — AI-powered advertising platform ([Live](https://adforge-sunkara.vercel.app) | [GitHub](https://github.com/sunkara1111/adforge))
+2. **AI Research Floor** — Experimental hedge fund research system ([Live](https://sunkara1111.github.io/ai-hedge-fund/) | [GitHub](https://github.com/sunkara1111/ai-hedge-fund))
+3. **DGS AI** — Intelligent assistant platform ([Live](https://sunkara1111.github.io/dgs-ai/) | [GitHub](https://github.com/sunkara1111/dgs-ai))
+4. **Client Kickoff System** — Streamlined onboarding automation ([GitHub](https://github.com/sunkara1111/client-kickoff-system-free))
+5. **Aetherline** — Next-gen automation control system ([Coming Soon](https://sunkara1111.github.io/aetherline/))
 
-## Development
+## 💻 Development
 
 ```bash
 # Install dependencies
 npm install
 
-# Run development server
+# Start dev server
 npm run dev
 
 # Build for production
 npm run build
 
 # Preview production build
-npm start
+npm run preview
 ```
 
-## Deployment
+## 🚀 Deployment
 
-Automatically deployed to GitHub Pages via GitHub Actions on push to `main` branch.
+The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch via GitHub Actions.
 
-The site uses:
-- Static export (`output: 'export'`)
-- Base path: `/portfolio/`
-- Automatic deployment workflow
+## 📄 License
 
-## Contact
-
-- **LinkedIn:** https://www.linkedin.com/in/dineshgopisunkara
-- **GitHub:** https://github.com/sunkara1111
-
----
-
-© 2024 Dineshgopi Sunkara. Built with Next.js & Tailwind CSS.
+© 2026 Dineshgopi Sunkara. All rights reserved.
