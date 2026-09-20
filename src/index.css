@@ -50,12 +50,64 @@
       0 0 40px -16px rgba(94, 234, 212, 0.25);
   }
 
+  .portrait-stage-wrap {
+    perspective: 1400px;
+  }
+
+  .portrait-stage {
+    transform-style: preserve-3d;
+    transition: transform 180ms ease-out;
+  }
+
   .portrait-frame {
-    @apply rounded-[1.6rem] border border-white/15;
+    @apply relative rounded-[1.6rem] border border-white/15;
+    transform: translateZ(28px);
     box-shadow:
-      0 0 0 1px rgba(94, 234, 212, 0.2),
-      0 0 50px rgba(168, 85, 247, 0.28),
-      0 30px 60px rgba(0, 0, 0, 0.45);
+      0 0 0 1px rgba(94, 234, 212, 0.28),
+      0 0 0 8px rgba(94, 234, 212, 0.06),
+      0 0 50px rgba(168, 85, 247, 0.32),
+      0 36px 70px rgba(0, 0, 0, 0.5);
+  }
+
+  .portrait-frame::after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      135deg,
+      rgba(94, 234, 212, 0.28),
+      transparent 38%,
+      rgba(192, 132, 252, 0.18)
+    );
+    mix-blend-mode: screen;
+  }
+
+  .project-card-3d {
+    transform-style: preserve-3d;
+    transition: transform 400ms ease, box-shadow 400ms ease;
+  }
+
+  .project-card-3d:hover {
+    transform: translateY(-10px) rotateX(5deg) scale(1.02);
+  }
+
+  .project-gloss {
+    position: relative;
+  }
+
+  .project-gloss::after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.28) 0%,
+      transparent 42%,
+      rgba(94, 234, 212, 0.12) 100%
+    );
   }
 
   .orbit-chip {
@@ -112,5 +164,10 @@
 
   html {
     scroll-behavior: auto;
+  }
+
+  .project-card-3d:hover,
+  .portrait-stage {
+    transform: none !important;
   }
 }

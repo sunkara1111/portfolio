@@ -1,11 +1,12 @@
 import React from 'react'
-import { ABOUT_ORBITS, SITE } from '../data/site'
+import { ABOUT_ORBITS, EDUCATION, EXPERIENCE, SITE } from '../data/site'
+import PortraitTilt from './PortraitTilt'
 
 const facts = [
-  { label: 'Role', value: SITE.title },
+  { label: 'Current role', value: `${EXPERIENCE[0].role} · ${EXPERIENCE[0].company}` },
   { label: 'Education', value: SITE.education },
   { label: 'University', value: SITE.university },
-  { label: 'Focus', value: 'Industrial controls, automation & AI-assisted tools' },
+  { label: 'Focus', value: 'OT, SCADA, and GxP / GMP automation' },
 ]
 
 const About = () => {
@@ -22,13 +23,15 @@ const About = () => {
             <span className="italic text-neon-purple">intelligence</span>.
           </h2>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
-            I&apos;m {SITE.name}, a {SITE.title} with a {SITE.education} from {SITE.university}.
-            I build practical automation and AI-assisted tools that help people and businesses
-            work more efficiently — without losing the reliability industrial systems demand.
+            I&apos;m {SITE.name}, an Automation Engineer at Jubilant HollisterStier in Spokane,
+            WA, with an {SITE.education} from {SITE.university}. I work across industrial
+            automation, OT platforms, and software architecture in regulated GxP / GMP
+            environments.
           </p>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
-            The work lives between plant-floor controls and modern software: PLC logic, SCADA
-            visibility, workflow automation, and interfaces operators can actually use.
+            The work lives between plant-floor controls and modern software: PLC / DCS
+            architectures, SCADA (Ignition, AVEVA), MES transactions, and interfaces operators
+            can actually use.
           </p>
         </div>
 
@@ -41,20 +44,22 @@ const About = () => {
               {orbit.label}
             </span>
           ))}
-          <figure className="portrait-frame relative mx-auto aspect-[4/5] overflow-hidden">
-            <img
-              src={SITE.portrait}
-              alt=""
-              width="460"
-              height="575"
-              className="h-full w-full object-cover object-top"
-            />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050510] to-transparent px-6 py-6 text-center">
-              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/80">
-                Developer · Controls · Automation
-              </p>
-            </div>
-          </figure>
+          <PortraitTilt>
+            <figure className="portrait-frame relative mx-auto aspect-[4/5] overflow-hidden">
+              <img
+                src={SITE.portraitAbout}
+                alt={`${SITE.name} on the Brooklyn Bridge`}
+                width="720"
+                height="1280"
+                className="h-full w-full object-cover object-[center_18%]"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050510] to-transparent px-6 py-6 text-center">
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/80">
+                  Developer · Controls · Automation
+                </p>
+              </div>
+            </figure>
+          </PortraitTilt>
         </div>
       </div>
 
@@ -65,6 +70,55 @@ const About = () => {
             <p className="mt-2 text-sm font-medium text-white">{fact.value}</p>
           </div>
         ))}
+      </div>
+
+      <div className="mx-auto mt-16 max-w-7xl">
+        <p className="font-mono text-xs uppercase tracking-[0.28em] text-neon-cyan">
+          Experience
+        </p>
+        <ul className="mt-6 grid gap-4 lg:grid-cols-2">
+          {EXPERIENCE.map((job) => (
+            <li key={`${job.company}-${job.dates}`} className="neon-card p-6">
+              <div className="flex flex-wrap items-center gap-2">
+                {job.current && (
+                  <span className="rounded-full border border-cyan-300/40 bg-cyan-400/10 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-neon-cyan">
+                    Current
+                  </span>
+                )}
+                <p className="font-mono text-xs uppercase tracking-wider text-muted">
+                  {job.dates}
+                </p>
+              </div>
+              <p className="mt-2 font-display text-xl text-white">{job.role}</p>
+              <p className="mt-1 text-sm text-muted">
+                {job.company} · {job.location}
+              </p>
+              {job.highlights && (
+                <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted">
+                  {job.highlights.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="mx-auto mt-12 max-w-7xl">
+        <p className="font-mono text-xs uppercase tracking-[0.28em] text-neon-purple">
+          Education
+        </p>
+        <ul className="mt-6 grid gap-4 md:grid-cols-2">
+          {EDUCATION.map((item) => (
+            <li key={item.credential} className="neon-card p-6">
+              <p className="font-mono text-xs uppercase tracking-wider text-muted">{item.dates}</p>
+              <p className="mt-2 font-display text-xl text-white">{item.credential}</p>
+              <p className="mt-1 text-sm text-muted">{item.school}</p>
+              {item.detail && <p className="mt-1 text-sm text-muted">{item.detail}</p>}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

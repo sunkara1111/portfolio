@@ -15,15 +15,22 @@ const Contact = () => {
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-muted">
           Let&apos;s talk controls, software, and the workflows that should run without you
-          watching them. Best reached on LinkedIn or GitHub.
+          watching them. Best reached on LinkedIn, GitHub, or email.
         </p>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
+          <a
+            href={SITE.resume}
+            download={SITE.resumeFileName}
+            className="btn-primary"
+          >
+            Download Resume
+          </a>
           <a
             href={SITE.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary inline-flex items-center gap-2"
+            className="btn-secondary inline-flex items-center gap-2"
           >
             <LinkedInIcon className="h-5 w-5" />
             LinkedIn
@@ -38,6 +45,11 @@ const Contact = () => {
             GitHub
           </a>
         </div>
+        <p className="mt-6 text-sm text-muted">
+          <a className="hover:text-neon-cyan" href={`mailto:${SITE.email}`}>{SITE.email}</a>
+          {' · '}
+          <a className="hover:text-neon-cyan" href={SITE.phoneHref}>{SITE.phone}</a>
+        </p>
       </div>
 
       <footer className="relative mx-auto mt-20 max-w-7xl border-t border-white/10 pt-8">
