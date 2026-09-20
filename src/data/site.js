@@ -16,11 +16,15 @@ export const SITE = {
   phone: '201-284-1559',
   phoneHref: 'tel:+12012841559',
   siteUrl: 'https://sunkara1111.github.io/portfolio/',
-  portrait: `${import.meta.env.BASE_URL}portrait-hero.jpg`,
-  portraitAbout: `${import.meta.env.BASE_URL}portrait-about.jpg`,
   resume: `${import.meta.env.BASE_URL}resume.pdf`,
   resumeFileName: 'Sunkara-Dineshgopi-Resume.pdf',
 }
+
+export const HERO_STATS = [
+  { value: '07', label: 'Live systems' },
+  { value: 'MS', label: 'Pace University' },
+  { value: 'OT', label: 'Controls · SCADA' },
+]
 
 export const EXPERIENCE = [
   {
@@ -78,7 +82,7 @@ export const PROJECTS = [
     extraLinks: [{ label: 'Reply tool', href: 'https://get-pilot-app.netlify.app/tools/reply' }],
     githubUrl: 'https://github.com/sunkara1111/pilot',
     status: 'live',
-    accent: 'from-emerald-300 via-teal-400 to-cyan-500',
+    accent: 'from-cyan-500/80 via-sky-700 to-[#041018]',
     art: 'pulse',
   },
   {
@@ -91,7 +95,7 @@ export const PROJECTS = [
     githubUrl: 'https://github.com/sunkara1111/statuspass',
     status: 'live',
     disclaimer: 'Not a law firm or DSO',
-    accent: 'from-violet-400 via-fuchsia-400 to-cyan-400',
+    accent: 'from-violet-500/80 via-indigo-700 to-[#080410]',
     art: 'orbit',
   },
   {
@@ -102,7 +106,7 @@ export const PROJECTS = [
     tags: ['AI', 'Marketing', 'Automation'],
     liveUrl: 'https://adforge-sunkara.vercel.app/',
     status: 'live',
-    accent: 'from-orange-400 via-amber-400 to-rose-400',
+    accent: 'from-blue-500/70 via-indigo-700 to-[#050816]',
     art: 'bars',
   },
   {
@@ -114,7 +118,7 @@ export const PROJECTS = [
     liveUrl: 'https://sunkara1111.github.io/dgs-ai/',
     githubUrl: 'https://github.com/sunkara1111/dgs-ai',
     status: 'live',
-    accent: 'from-sky-400 via-indigo-400 to-blue-600',
+    accent: 'from-sky-400/80 via-blue-700 to-[#040814]',
     art: 'wave',
   },
   {
@@ -127,7 +131,7 @@ export const PROJECTS = [
     githubUrl: 'https://github.com/sunkara1111/ai-hedge-fund',
     status: 'live',
     disclaimer: 'Research & experimental project',
-    accent: 'from-amber-300 via-violet-400 to-blue-600',
+    accent: 'from-violet-400/80 via-blue-700 to-[#060410]',
     art: 'nodes',
   },
   {
@@ -139,7 +143,7 @@ export const PROJECTS = [
     liveUrl: 'https://sunkara1111.github.io/aetherline/',
     githubUrl: 'https://github.com/sunkara1111/aetherline',
     status: 'live',
-    accent: 'from-cyan-300 via-teal-400 to-blue-500',
+    accent: 'from-cyan-300/80 via-blue-700 to-[#031018]',
     art: 'wave',
   },
   {
@@ -151,7 +155,7 @@ export const PROJECTS = [
     liveUrl: 'https://sunkara1111.github.io/client-kickoff-system-free/',
     githubUrl: 'https://github.com/sunkara1111/client-kickoff-system-free',
     status: 'live',
-    accent: 'from-pink-400 via-rose-400 to-orange-400',
+    accent: 'from-fuchsia-500/70 via-violet-800 to-[#0a0614]',
     art: 'grid',
   },
 ]

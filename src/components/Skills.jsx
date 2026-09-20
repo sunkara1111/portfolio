@@ -9,7 +9,7 @@ const Skills = () => {
         <div className="mb-14">
           <p className="mb-3 font-mono text-xs uppercase tracking-[0.28em] text-muted">Capabilities</p>
           <h2 className="font-display text-5xl text-white md:text-7xl">
-            My Toolkit<span className="text-neon-cyan">.</span>
+            My Toolkit<span className="text-white">.</span>
           </h2>
           <p className="mt-5 max-w-2xl text-lg text-muted">
             Industrial controls on one side, software and AI-assisted tooling on the other —

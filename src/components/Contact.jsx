@@ -5,7 +5,7 @@ import { GitHubIcon, LinkedInIcon, SocialLinks } from './icons'
 const Contact = () => {
   return (
     <section id="contact" className="relative px-5 py-24 md:px-8 md:py-32">
-      <div className="glow-orb right-10 top-10 h-72 w-72 bg-violet-600/20" />
+      <div className="glow-orb right-10 top-10 h-72 w-72 bg-violet-600/16" />
       <div className="relative mx-auto max-w-4xl text-center">
         <p className="mb-4 font-mono text-xs uppercase tracking-[0.28em] text-neon-cyan">
           Contact

@@ -6,7 +6,7 @@ const ProjectArt = ({ art, accent }) => {
   const stroke = 'rgba(255,255,255,0.85)'
   return (
     <div className={`project-gloss relative h-44 overflow-hidden bg-gradient-to-br ${accent}`}>
-      <div className="absolute inset-0 bg-[#050510]/20" />
+      <div className="absolute inset-0 bg-black/35" />
       <svg className="absolute inset-0 h-full w-full" viewBox="0 0 320 176" fill="none" aria-hidden="true">
         {art === 'wave' && (
           <path
@@ -281,7 +281,7 @@ const Coverflow = ({ projects }) => {
 const Projects = () => {
   return (
     <section id="work" className="relative overflow-x-clip px-5 py-24 md:px-8 md:py-32">
-      <div className="glow-orb left-1/2 top-10 h-72 w-72 -translate-x-1/2 bg-fuchsia-500/15" />
+      <div className="glow-orb left-1/2 top-10 h-72 w-72 -translate-x-1/2 bg-cyan-400/10" />
       <div className="relative mx-auto max-w-7xl">
         <div className="mb-10 text-center">
           <p className="mb-3 font-mono text-xs uppercase tracking-[0.28em] text-muted">Selected work</p>

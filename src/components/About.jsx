@@ -1,6 +1,5 @@
 import React from 'react'
 import { ABOUT_ORBITS, EDUCATION, EXPERIENCE, SITE } from '../data/site'
-import PortraitTilt from './PortraitTilt'
 
 const facts = [
   { label: 'Current role', value: `${EXPERIENCE[0].role} · ${EXPERIENCE[0].company}` },
@@ -12,15 +11,19 @@ const facts = [
 const About = () => {
   return (
     <section id="about" className="relative px-5 py-24 md:px-8 md:py-32">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
+      <div className="pointer-events-none absolute inset-0">
+        <div className="glow-orb right-0 top-20 h-72 w-72 bg-cyan-400/10" />
+      </div>
+
+      <div className="relative mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
         <div>
           <p className="mb-4 font-mono text-xs uppercase tracking-[0.28em] text-neon-purple">
             About
           </p>
-          <h2 className="font-display text-4xl leading-[1.05] text-white sm:text-5xl md:text-6xl">
+          <h2 className="font-display text-4xl leading-[1.02] text-white sm:text-5xl md:text-6xl">
             Building at the intersection of{' '}
-            <span className="italic text-neon-cyan">control</span> &{' '}
-            <span className="italic text-neon-purple">intelligence</span>.
+            <span className="italic text-white">control</span> &{' '}
+            <span className="italic text-neon-cyan">intelligence</span>.
           </h2>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
             I&apos;m {SITE.name}, an Automation Engineer at Jubilant HollisterStier in Spokane,
@@ -44,28 +47,38 @@ const About = () => {
               {orbit.label}
             </span>
           ))}
-          <PortraitTilt>
-            <figure className="portrait-frame relative mx-auto aspect-[4/5] overflow-hidden">
-              <img
-                src={SITE.portraitAbout}
-                alt={`${SITE.name} on the Brooklyn Bridge`}
-                width="1206"
-                height="2144"
-                className="h-full w-full object-cover object-[center_18%]"
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050510] to-transparent px-6 py-6 text-center">
-                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/80">
-                  Developer · Controls · Automation
-                </p>
+          <div className="hud-panel overflow-hidden p-8">
+            <div className="mb-6 flex items-center justify-between">
+              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-neon-cyan">
+                Profile
+              </span>
+              <span className="h-2 w-2 rounded-full bg-neon-cyan shadow-[0_0_12px_#00e5ff]" />
+            </div>
+            <p className="font-display text-4xl leading-none text-white">
+              {SITE.firstName}
+              <br />
+              {SITE.lastName}.
+            </p>
+            <p className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-white/70">
+              {SITE.title}
+            </p>
+            <div className="mt-8 grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Now</p>
+                <p className="mt-1 text-sm text-white">{EXPERIENCE[0].company}</p>
               </div>
-            </figure>
-          </PortraitTilt>
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-wider text-muted">School</p>
+                <p className="mt-1 text-sm text-white">{SITE.university} · MS</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="mx-auto mt-16 grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {facts.map((fact) => (
-          <div key={fact.label} className="neon-card p-5">
+          <div key={fact.label} className="hud-panel p-5">
             <p className="font-mono text-xs uppercase tracking-wider text-muted">{fact.label}</p>
             <p className="mt-2 text-sm font-medium text-white">{fact.value}</p>
           </div>

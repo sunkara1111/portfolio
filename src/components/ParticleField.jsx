@@ -26,42 +26,54 @@ const ParticleField = () => {
     }
 
     const createParticles = () => {
-      const count = Math.min(140, Math.floor((width * height) / 14000))
+      const count = Math.min(90, Math.floor((width * height) / 18000))
       particles = Array.from({ length: count }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
-        r: Math.random() * 1.4 + 0.3,
-        vx: (Math.random() - 0.5) * 0.18,
-        vy: (Math.random() - 0.5) * 0.18,
-        a: Math.random() * 0.55 + 0.15,
-        hue: Math.random() > 0.7 ? 190 : Math.random() > 0.4 ? 270 : 210,
+        r: Math.random() * 1.2 + 0.25,
+        vx: (Math.random() - 0.5) * 0.16,
+        vy: (Math.random() - 0.5) * 0.16,
+        a: Math.random() * 0.45 + 0.18,
+        hue: Math.random() > 0.55 ? 188 : Math.random() > 0.35 ? 262 : 220,
       }))
     }
 
-    const drawStatic = () => {
+    const draw = (move) => {
       ctx.clearRect(0, 0, width, height)
-      particles.forEach((p) => {
+      particles.forEach((p, i) => {
+        if (move) {
+          p.x += p.vx
+          p.y += p.vy
+          if (p.x < 0) p.x = width
+          if (p.x > width) p.x = 0
+          if (p.y < 0) p.y = height
+          if (p.y > height) p.y = 0
+        }
+
+        for (let j = i + 1; j < particles.length; j += 1) {
+          const q = particles[j]
+          const dx = p.x - q.x
+          const dy = p.y - q.y
+          const dist = Math.hypot(dx, dy)
+          if (dist < 118) {
+            ctx.beginPath()
+            ctx.strokeStyle = `hsla(${p.hue}, 90%, 70%, ${0.08 * (1 - dist / 118)})`
+            ctx.lineWidth = 0.6
+            ctx.moveTo(p.x, p.y)
+            ctx.lineTo(q.x, q.y)
+            ctx.stroke()
+          }
+        }
+
         ctx.beginPath()
-        ctx.fillStyle = `hsla(${p.hue}, 90%, 78%, ${p.a})`
+        ctx.fillStyle = `hsla(${p.hue}, 95%, 76%, ${p.a})`
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
         ctx.fill()
       })
     }
 
     const tick = () => {
-      ctx.clearRect(0, 0, width, height)
-      particles.forEach((p) => {
-        p.x += p.vx
-        p.y += p.vy
-        if (p.x < 0) p.x = width
-        if (p.x > width) p.x = 0
-        if (p.y < 0) p.y = height
-        if (p.y > height) p.y = 0
-        ctx.beginPath()
-        ctx.fillStyle = `hsla(${p.hue}, 90%, 78%, ${p.a})`
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-        ctx.fill()
-      })
+      draw(true)
       animationId = requestAnimationFrame(tick)
     }
 
@@ -69,7 +81,7 @@ const ParticleField = () => {
       resize()
       createParticles()
       if (media.matches) {
-        drawStatic()
+        draw(false)
         return
       }
       tick()

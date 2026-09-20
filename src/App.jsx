@@ -1,6 +1,6 @@
-import React from 'react'
-// Public branding: name, role, GitHub, LinkedIn. No platform / "Powered by" HUD badges.
+import React, { useCallback, useState } from 'react'
 import ParticleField from './components/ParticleField'
+import IntroLoader from './components/IntroLoader'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -9,10 +9,16 @@ import Skills from './components/Skills'
 import Contact from './components/Contact'
 
 function App() {
+  const [ready, setReady] = useState(false)
+  const [showIntro, setShowIntro] = useState(true)
+  const onReveal = useCallback(() => setReady(true), [])
+  const onIntroComplete = useCallback(() => setShowIntro(false), [])
+
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-hidden bg-black">
+      {showIntro && <IntroLoader onReveal={onReveal} onComplete={onIntroComplete} />}
       <ParticleField />
-      <div className="relative z-10">
+      <div className={`relative z-10 site-stage ${ready ? 'is-ready' : ''}`}>
         <Navigation />
         <main>
           <Hero />
