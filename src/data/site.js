@@ -10,7 +10,7 @@ export const SITE = {
   education: "Master's degree in Computer Science",
   university: 'Pace University',
   github: 'https://github.com/sunkara1111',
-  linkedin: 'https://www.linkedin.com/in/dineshgopisunkara',
+  linkedin: 'https://www.linkedin.com/in/sunkara-dineshgopi-86464919b',
   siteUrl: 'https://sunkara1111.github.io/portfolio/',
   portrait: `${import.meta.env.BASE_URL}portrait.jpg`,
 }
