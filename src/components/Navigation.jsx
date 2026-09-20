@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { GITHUB_PROFILE, LINKEDIN_URL } from '../data/projects'
+import { SocialIconLinks } from './SocialLinks'
 
 const links = [
   { href: '#about', label: 'About' },
@@ -27,7 +29,7 @@ const Navigation = () => {
         <a href="#top" className="font-hud text-sm tracking-[0.35em] text-cyan">
           DS
         </a>
-        <div className="hidden md:flex gap-10">
+        <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <a
               key={link.href}
@@ -37,16 +39,20 @@ const Navigation = () => {
               {link.label}
             </a>
           ))}
+          <SocialIconLinks />
         </div>
-        <button
-          type="button"
-          className="md:hidden font-hud text-[11px] tracking-[0.3em] uppercase text-cyan"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-label="Menu"
-        >
-          {open ? 'Close' : 'Menu'}
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <SocialIconLinks />
+          <button
+            type="button"
+            className="font-hud text-[11px] tracking-[0.3em] uppercase text-cyan"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-label="Menu"
+          >
+            {open ? 'Close' : 'Menu'}
+          </button>
+        </div>
       </div>
       {open && (
         <div className="md:hidden px-6 pb-6 flex flex-col gap-4 bg-background/95 border-b border-cyan/15">
@@ -60,6 +66,22 @@ const Navigation = () => {
               {link.label}
             </a>
           ))}
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="me noopener noreferrer"
+            className="font-hud text-sm tracking-[0.3em] uppercase text-cyan"
+          >
+            LinkedIn
+          </a>
+          <a
+            href={GITHUB_PROFILE}
+            target="_blank"
+            rel="me noopener noreferrer"
+            className="font-hud text-sm tracking-[0.3em] uppercase text-cyan"
+          >
+            GitHub
+          </a>
         </div>
       )}
     </nav>

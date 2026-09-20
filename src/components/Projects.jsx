@@ -64,7 +64,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="text-sm text-muted hover:text-cyan"
                   >
-                    Source
+                    GitHub repo
                   </a>
                 )}
               </div>

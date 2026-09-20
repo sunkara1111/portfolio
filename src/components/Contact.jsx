@@ -1,5 +1,6 @@
 import React from 'react'
-import { projects, FOUNDER_NAME, FOUNDER_SHORT, FOUNDER_ROLE_LONG, PORTFOLIO_URL } from '../data/projects'
+import { projects, FOUNDER_NAME, FOUNDER_SHORT, FOUNDER_ROLE_LONG, PORTFOLIO_URL, GITHUB_PROFILE, GITHUB_PORTFOLIO_REPO } from '../data/projects'
+import { ConnectButtons } from './SocialLinks'
 
 const ProofStrip = () => {
   const items = [
@@ -7,6 +8,8 @@ const ProofStrip = () => {
     `${FOUNDER_NAME} · ${FOUNDER_SHORT}`,
     'Pace University',
     'Automation Engineer',
+    'GitHub @sunkara1111',
+    'LinkedIn',
   ]
   const loop = [...items, ...items]
 
@@ -34,34 +37,20 @@ const Contact = () => {
         <p className="section-kicker mb-4">Contact</p>
         <h2 className="text-4xl md:text-5xl text-text mb-6">Have a workflow worth improving?</h2>
         <p className="text-muted mb-10">
-          Talk to {FOUNDER_NAME} ({FOUNDER_SHORT}) — {FOUNDER_ROLE_LONG}.
+          Connect with {FOUNDER_NAME} ({FOUNDER_SHORT}) on LinkedIn or GitHub — {FOUNDER_ROLE_LONG}.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
-          <a
-            href="https://www.linkedin.com/in/dineshgopisunkara"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            Let&apos;s talk
-          </a>
-          <a
-            href="https://www.linkedin.com/in/dineshgopisunkara"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/sunkara1111"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary"
-          >
-            GitHub
-          </a>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+          <ConnectButtons />
         </div>
+        <p className="font-mono text-xs text-muted mb-14">
+          <a href={GITHUB_PROFILE} target="_blank" rel="me noopener noreferrer" className="text-cyan hover:text-cyan-dim">
+            github.com/sunkara1111
+          </a>
+          {' · '}
+          <a href={GITHUB_PORTFOLIO_REPO} target="_blank" rel="noopener noreferrer" className="text-cyan hover:text-cyan-dim">
+            portfolio repo
+          </a>
+        </p>
         <nav aria-label="Live Sunkara projects" className="mb-12">
           <p className="section-kicker mb-4">Live projects</p>
           <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">

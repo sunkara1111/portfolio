@@ -32,7 +32,7 @@ const BuiltCarousel = () => {
           return (
             <article
               key={project.id}
-              className={`carousel-card absolute w-[250px] sm:w-[280px] h-[360px] rounded-[1.6rem] p-6 flex flex-col text-left bg-gradient-to-br ${project.gradient} shadow-glow-lg`}
+              className={`carousel-card absolute w-[250px] sm:w-[280px] h-[380px] rounded-[1.6rem] p-6 flex flex-col text-left bg-gradient-to-br ${project.gradient} shadow-glow-lg`}
               style={{
                 transform: `translateX(${offset * 210}px) rotateY(${offset * -38}deg) translateZ(${abs === 0 ? 80 : -80}px) scale(${abs === 0 ? 1 : 0.82})`,
                 opacity: hidden ? 0 : abs === 0 ? 1 : 0.55,
@@ -55,6 +55,16 @@ const BuiltCarousel = () => {
               >
                 View live
               </a>
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 text-center text-xs text-white underline underline-offset-4"
+                >
+                  GitHub repo
+                </a>
+              )}
               {project.extraLinks?.map((link) => (
                 <a
                   key={link.href}

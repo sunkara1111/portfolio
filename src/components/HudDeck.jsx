@@ -20,7 +20,19 @@ const HudDeck = () => {
                 >
                   {project.title}
                 </a>
-                <span className="font-mono text-[10px] tracking-widest uppercase text-cyan">Live</span>
+                <span className="flex items-center gap-2 shrink-0">
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-[10px] tracking-widest uppercase text-muted hover:text-cyan"
+                    >
+                      Repo
+                    </a>
+                  )}
+                  <span className="font-mono text-[10px] tracking-widest uppercase text-cyan">Live</span>
+                </span>
               </li>
             ))}
           </ul>

@@ -8,6 +8,9 @@ export const FOUNDER_SHORT = 'DINESH S'
 export const FOUNDER_ROLE = 'Automation Engineer'
 export const FOUNDER_ROLE_LONG = 'Senior Controls Engineer · Automation Engineer'
 export const PORTFOLIO_URL = 'https://sunkara1111.github.io/portfolio/'
+export const GITHUB_PROFILE = 'https://github.com/sunkara1111'
+export const GITHUB_PORTFOLIO_REPO = 'https://github.com/sunkara1111/portfolio'
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/dineshgopisunkara'
 
 export const projects = [
   {

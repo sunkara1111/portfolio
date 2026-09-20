@@ -1,5 +1,6 @@
 import React from 'react'
 import { liveCount, projects } from '../data/projects'
+import { ConnectButtons } from './SocialLinks'
 
 const HeroVisual = () => {
   return (
@@ -49,10 +50,8 @@ const Hero = () => {
             and AI-assisted tools — founder of Pilot, StatusPass, AdForge, DGS AI, AI Fund,
             Aetherline, and Client Kickoff.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <a href="#contact" className="btn-primary text-center">
-              Let&apos;s talk
-            </a>
+          <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-4">
+            <ConnectButtons />
             <a href="#work" className="btn-secondary text-center">
               View work
             </a>

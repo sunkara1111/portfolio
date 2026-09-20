@@ -8,6 +8,8 @@ Dark cyberpunk portfolio indexing live automation systems and AI tools.
 
 **https://sunkara1111.github.io/portfolio/**
 
+Connect: [LinkedIn](https://www.linkedin.com/in/dineshgopisunkara) · [GitHub](https://github.com/sunkara1111)
+
 Crawlable project directory: **https://sunkara1111.github.io/portfolio/projects.html**
 
 ## Live projects
