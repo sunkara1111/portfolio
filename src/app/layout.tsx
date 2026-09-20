@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dineshgopi Sunkara — Founder Building AI Products",
-  description: "Founder building AI products that ship — multi-agent systems, ads, markets. Featured work: AdForge, Dinesh AI Fund, DGS AI.",
-  keywords: ["Dineshgopi Sunkara", "AI products", "founder", "Next.js", "TypeScript", "multi-agent systems", "AdForge", "DGS AI"],
-  authors: [{ name: "Dineshgopi Sunkara" }],
+  title: "Dinesh Gopi Sunkara — Automation Engineer",
+  description: "Automation Engineer with a Master's degree in Computer Science from Pace University, building practical and accessible automation and AI-assisted tools. Featured work: AdForge, Dinesh AI Fund, DGS AI.",
+  keywords: ["Dinesh Gopi Sunkara", "Automation Engineer", "Pace University", "Next.js", "TypeScript", "automation", "AI tools", "AdForge", "DGS AI"],
+  authors: [{ name: "Dinesh Gopi Sunkara" }],
   openGraph: {
-    title: "Dineshgopi Sunkara — Founder Building AI Products",
-    description: "Founder building AI products that ship — multi-agent systems, ads, markets.",
+    title: "Dinesh Gopi Sunkara — Automation Engineer",
+    description: "Automation Engineer with a Master's in Computer Science from Pace University, building practical and accessible automation and AI-assisted tools.",
     url: "https://sunkara1111.github.io/portfolio/",
-    siteName: "Dineshgopi Sunkara Portfolio",
+    siteName: "Dinesh Gopi Sunkara Portfolio",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dineshgopi Sunkara — Founder Building AI Products",
-    description: "Founder building AI products that ship — multi-agent systems, ads, markets.",
+    title: "Dinesh Gopi Sunkara — Automation Engineer",
+    description: "Automation Engineer building practical and accessible automation and AI-assisted tools.",
   },
   icons: {
     icon: "/portfolio/favicon.svg",

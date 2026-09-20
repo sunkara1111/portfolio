@@ -38,7 +38,7 @@ export default function HowIBuild() {
             <span className="gradient-text">How I Build</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            From concept to production — a founder&apos;s approach to shipping
+            From concept to production — practical automation engineering
           </p>
         </motion.div>
 

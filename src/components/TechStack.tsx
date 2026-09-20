@@ -40,7 +40,7 @@ export default function TechStack() {
             <span className="gradient-text">Tech Stack</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            Tools and technologies I use to ship products
+            Tools and technologies for building automation systems
           </p>
         </motion.div>
 
