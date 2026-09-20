@@ -4,6 +4,13 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-20">
       <div className="max-w-6xl mx-auto text-center">
+        <p className="font-mono text-sm text-primary tracking-wide mb-4">
+          Dineshgopi Sunkara · DINESH S
+        </p>
+        <p className="text-sm md:text-base text-muted font-medium mb-6">
+          Senior Controls Engineer · Automation Engineer
+        </p>
+
         {/* Main headline */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-semibold text-text mb-6 leading-tight">
           I automate complexity into<br />simple, reliable workflows.
@@ -11,8 +18,8 @@ const Hero = () => {
         
         {/* Supporting text */}
         <p className="text-lg md:text-xl text-muted max-w-3xl mx-auto mb-10 leading-relaxed">
-          I'm an Automation Engineer with a Master's degree in Computer Science from Pace University. 
-          I build practical automation and AI-assisted tools that help people and businesses work more efficiently.
+          I&apos;m Dineshgopi Sunkara (DINESH S), an Automation Engineer with a Master&apos;s degree in Computer Science from Pace University.
+          I am the founder of Pilot, StatusPass, AdForge, DGS AI, Sunkara AI Fund, Aetherline, and Client Kickoff — practical automation and AI-assisted tools that help people and businesses work more efficiently.
         </p>
         
         {/* CTAs */}

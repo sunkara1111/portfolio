@@ -18,9 +18,9 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <a href="#" className="font-heading font-semibold text-lg text-text hover:text-primary transition-colors">
-            Dinesh Gopi Sunkara
+            Dineshgopi Sunkara
           </a>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap justify-end gap-4 md:gap-8">
             <a href="#about" className="text-sm text-muted hover:text-text transition-colors">
               About
             </a>
