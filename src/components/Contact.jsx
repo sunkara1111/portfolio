@@ -45,7 +45,15 @@ const Contact = () => {
           <p className="text-sm text-muted">
             © {new Date().getFullYear()} {SITE.name} · {SITE.title}
           </p>
-          <SocialLinks />
+          <div className="flex items-center gap-4">
+            <a
+              href={`${import.meta.env.BASE_URL}projects.html`}
+              className="text-sm text-muted underline-offset-4 hover:text-neon-cyan hover:underline"
+            >
+              Live projects
+            </a>
+            <SocialLinks />
+          </div>
         </div>
       </footer>
     </section>
