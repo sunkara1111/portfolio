@@ -1,83 +1,65 @@
 import React from 'react'
+import { liveCount, projects } from '../data/projects'
+
+const HeroVisual = () => {
+  return (
+    <div className="relative w-full max-w-xl mx-auto aspect-square">
+      <div className="absolute inset-[8%] rounded-[2rem] neon-border bg-gradient-to-br from-purple/20 via-background to-cyan/10" />
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[70%] w-[70%] rounded-full border border-cyan/20 animate-pulse" />
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[48%] w-[48%] rounded-full border border-purple/30" />
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
+        <span className="font-heading text-6xl md:text-7xl text-cyan drop-shadow-[0_0_24px_rgba(0,229,255,0.7)]">
+          DS
+        </span>
+        <span className="font-mono text-xs tracking-[0.4em] text-muted mt-3">DINESH S</span>
+      </div>
+      <div className="absolute -left-2 top-[18%] h-24 w-1.5 rounded-full bg-cyan shadow-glow" />
+      <div className="absolute -right-1 top-[30%] h-32 w-1.5 rounded-full bg-purple shadow-glow-purple" />
+      {projects.slice(0, 4).map((project, index) => (
+        <span
+          key={project.id}
+          className="absolute hidden lg:inline-block font-mono text-[10px] tracking-widest uppercase text-cyan bg-background/80 neon-border px-3 py-1 rounded-full"
+          style={{
+            top: `${12 + index * 18}%`,
+            [index % 2 === 0 ? 'right' : 'left']: '-4%',
+          }}
+        >
+          {project.title}
+        </span>
+      ))}
+      <p className="absolute bottom-4 left-1/2 -translate-x-1/2 font-hud text-[10px] tracking-[0.4em] text-cyan">
+        {String(liveCount).padStart(2, '0')} LIVE
+      </p>
+    </div>
+  )
+}
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 pt-20">
-      <div className="max-w-6xl mx-auto text-center">
-        <p className="font-mono text-sm text-primary tracking-wide mb-4">
-          Dineshgopi Sunkara · DINESH S
-        </p>
-        <p className="text-sm md:text-base text-muted font-medium mb-6">
-          Senior Controls Engineer · Automation Engineer
-        </p>
-
-        {/* Main headline */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-semibold text-text mb-6 leading-tight">
-          I automate complexity into<br />simple, reliable workflows.
-        </h1>
-        
-        {/* Supporting text */}
-        <p className="text-lg md:text-xl text-muted max-w-3xl mx-auto mb-10 leading-relaxed">
-          I&apos;m Dineshgopi Sunkara (DINESH S), an Automation Engineer with a Master&apos;s degree in Computer Science from Pace University.
-          I am the founder of Pilot, StatusPass, AdForge, DGS AI, Sunkara AI Fund, Aetherline, and Client Kickoff — practical automation and AI-assisted tools that help people and businesses work more efficiently.
-        </p>
-        
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="#work" className="btn-primary">
-            View my work
-          </a>
-          <a 
-            href="https://www.linkedin.com/in/dineshgopisunkara"
-            target="_blank"
-            rel="noopener noreferrer" 
-            className="btn-secondary"
-          >
-            Connect with me
-          </a>
-        </div>
-        
-        {/* Optional workflow visual */}
-        <div className="mt-20 max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            <div className="card p-6 text-center">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-surface-light flex items-center justify-center">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <p className="text-sm text-muted font-mono">Input</p>
-            </div>
-            
-            <div className="card p-6 text-center blue-glow">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-primary/10 flex items-center justify-center">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <p className="text-sm text-primary font-mono">Automation</p>
-            </div>
-            
-            <div className="card p-6 text-center blue-glow">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-primary/10 flex items-center justify-center">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <p className="text-sm text-primary font-mono">Intelligence</p>
-            </div>
-            
-            <div className="card p-6 text-center">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-surface-light flex items-center justify-center">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <p className="text-sm text-muted font-mono">Result</p>
-            </div>
+    <section id="top" className="relative min-h-screen flex items-center px-6 pt-24 pb-16">
+      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p className="section-kicker mb-5">DINESH S · Automation Engineer</p>
+          <h1 className="hero-name text-5xl sm:text-6xl md:text-7xl lg:text-[5.4rem]">
+            Dinesh Gopi
+            <br />
+            Sunkara
+          </h1>
+          <p className="mt-6 text-lg text-muted max-w-xl">
+            Master&apos;s in Computer Science, Pace University. I design practical automation
+            and AI-assisted tools — founder of Pilot, StatusPass, AdForge, DGS AI, AI Fund,
+            Aetherline, and Client Kickoff.
+          </p>
+          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            <a href="#contact" className="btn-primary text-center">
+              Let&apos;s talk
+            </a>
+            <a href="#work" className="btn-secondary text-center">
+              View work
+            </a>
           </div>
         </div>
+        <HeroVisual />
       </div>
     </section>
   )
