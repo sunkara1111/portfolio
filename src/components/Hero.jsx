@@ -40,10 +40,9 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <p className="section-kicker mb-5">DINESH S · Automation Engineer</p>
-          <h1 className="hero-name text-5xl sm:text-6xl md:text-7xl lg:text-[5.4rem]">
-            Dinesh Gopi
-            <br />
-            Sunkara
+          <h1 className="hero-name text-5xl sm:text-6xl md:text-7xl lg:text-[5.2rem]">
+            <span className="block whitespace-nowrap">Dinesh Gopi</span>
+            <span className="block whitespace-nowrap">Sunkara</span>
           </h1>
           <p className="mt-6 text-lg text-muted max-w-xl">
             Master&apos;s in Computer Science, Pace University. I design practical automation
