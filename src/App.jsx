@@ -1,4 +1,5 @@
 import React from 'react'
+// Public branding: name, role, GitHub, LinkedIn. No platform / "Powered by" HUD badges.
 import ParticleField from './components/ParticleField'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'

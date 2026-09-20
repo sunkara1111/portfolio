@@ -11,6 +11,7 @@ export const SITE = {
   university: 'Pace University',
   github: 'https://github.com/sunkara1111',
   linkedin: 'https://www.linkedin.com/in/dineshgopisunkara',
+  siteUrl: 'https://sunkara1111.github.io/portfolio/',
   portrait: `${import.meta.env.BASE_URL}portrait.jpg`,
 }
 
@@ -24,40 +25,40 @@ export const NAV_LINKS = [
 export const PROJECTS = [
   {
     id: 1,
+    title: 'Pilot',
+    description:
+      'Free hub for communication, business writing, resumes, and message analysis. Practical productivity tools with secure backend architecture.',
+    tags: ['Productivity', 'Communication', 'Tools'],
+    liveUrl: 'https://get-pilot-app.netlify.app/',
+    extraLinks: [{ label: 'Reply tool', href: 'https://get-pilot-app.netlify.app/tools/reply' }],
+    githubUrl: 'https://github.com/sunkara1111/pilot',
+    status: 'live',
+    accent: 'from-emerald-300 via-teal-400 to-cyan-500',
+    art: 'pulse',
+  },
+  {
+    id: 2,
+    title: 'StatusPass',
+    description:
+      'F-1 / CPT / OPT / STEM OPT compliance organizer for international students in the United States. Tracks visa and work-authorization clocks so the next action is clear.',
+    tags: ['F-1', 'CPT', 'OPT', 'STEM OPT'],
+    liveUrl: 'https://temporary-prompt-pavo-7vphl3a.vercel.app/',
+    githubUrl: 'https://github.com/sunkara1111/statuspass',
+    status: 'live',
+    disclaimer: 'Not a law firm or DSO',
+    accent: 'from-violet-400 via-fuchsia-400 to-cyan-400',
+    art: 'orbit',
+  },
+  {
+    id: 3,
     title: 'AdForge',
     description:
       'AI-powered advertising platform for creating, managing, and optimizing digital ad campaigns with intelligent automation and analytics.',
     tags: ['AI', 'Marketing', 'Automation'],
-    liveUrl: 'https://adforge-sunkara.vercel.app',
-    githubUrl: 'https://github.com/sunkara1111/adforge',
+    liveUrl: 'https://adforge-sunkara.vercel.app/',
     status: 'live',
     accent: 'from-orange-400 via-amber-400 to-rose-400',
     art: 'bars',
-  },
-  {
-    id: 2,
-    title: 'Aetherline',
-    description:
-      'Next-generation automation control system integrating industrial controls with modern software engineering practices.',
-    tags: ['Controls', 'Automation', 'SCADA'],
-    liveUrl: 'https://sunkara1111.github.io/aetherline/',
-    githubUrl: 'https://github.com/sunkara1111/aetherline',
-    status: 'live',
-    accent: 'from-cyan-300 via-teal-400 to-blue-500',
-    art: 'wave',
-  },
-  {
-    id: 3,
-    title: 'AI Research Floor',
-    description:
-      'Experimental AI-driven hedge fund research system. Academic research project exploring algorithmic trading strategies and market analysis.',
-    tags: ['AI', 'Research', 'Finance'],
-    liveUrl: 'https://sunkara1111.github.io/ai-hedge-fund/',
-    githubUrl: 'https://github.com/sunkara1111/ai-hedge-fund',
-    status: 'live',
-    disclaimer: 'Research & experimental project',
-    accent: 'from-violet-400 via-fuchsia-400 to-purple-600',
-    art: 'nodes',
   },
   {
     id: 4,
@@ -69,10 +70,35 @@ export const PROJECTS = [
     githubUrl: 'https://github.com/sunkara1111/dgs-ai',
     status: 'live',
     accent: 'from-sky-400 via-indigo-400 to-blue-600',
-    art: 'orbit',
+    art: 'wave',
   },
   {
     id: 5,
+    title: 'AI Fund',
+    description:
+      'Sunkara AI Fund — experimental AI-driven hedge fund research. Academic project exploring algorithmic trading strategies and market analysis. Paper / research only.',
+    tags: ['AI', 'Research', 'Finance'],
+    liveUrl: 'https://sunkara1111.github.io/ai-hedge-fund/',
+    githubUrl: 'https://github.com/sunkara1111/ai-hedge-fund',
+    status: 'live',
+    disclaimer: 'Research & experimental project',
+    accent: 'from-amber-300 via-violet-400 to-blue-600',
+    art: 'nodes',
+  },
+  {
+    id: 6,
+    title: 'Aetherline',
+    description:
+      'Next-generation automation control system integrating industrial controls with modern software engineering practices.',
+    tags: ['Controls', 'Automation', 'SCADA'],
+    liveUrl: 'https://sunkara1111.github.io/aetherline/',
+    githubUrl: 'https://github.com/sunkara1111/aetherline',
+    status: 'live',
+    accent: 'from-cyan-300 via-teal-400 to-blue-500',
+    art: 'wave',
+  },
+  {
+    id: 7,
     title: 'Client Kickoff',
     description:
       'Streamlined client onboarding and project kickoff management system designed to automate initial engagement workflows.',
@@ -82,18 +108,6 @@ export const PROJECTS = [
     status: 'live',
     accent: 'from-pink-400 via-rose-400 to-orange-400',
     art: 'grid',
-  },
-  {
-    id: 6,
-    title: 'Pilot',
-    description:
-      'Free hub for communication, business writing, resumes, and message analysis. Practical productivity tools with secure backend architecture.',
-    tags: ['Productivity', 'Communication', 'Tools'],
-    liveUrl: 'https://get-pilot-app.netlify.app/',
-    githubUrl: 'https://github.com/sunkara1111/pilot',
-    status: 'live',
-    accent: 'from-emerald-300 via-teal-400 to-cyan-500',
-    art: 'pulse',
   },
 ]
 

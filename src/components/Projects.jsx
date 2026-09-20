@@ -100,6 +100,17 @@ const ProjectActions = ({ project }) => (
         View Live
       </a>
     )}
+    {project.extraLinks?.map((link) => (
+      <a
+        key={link.href}
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn-secondary px-4 py-2 text-sm"
+      >
+        {link.label}
+      </a>
+    ))}
     {project.githubUrl && (
       <a
         href={project.githubUrl}
