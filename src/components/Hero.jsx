@@ -1,75 +1,58 @@
 import React from 'react'
+import { SITE } from '../data/site'
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 pt-20">
-      <div className="max-w-6xl mx-auto text-center">
-        {/* Main headline */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-semibold text-text mb-6 leading-tight">
-          I automate complexity into<br />simple, reliable workflows.
-        </h1>
-        
-        {/* Supporting text */}
-        <p className="text-lg md:text-xl text-muted max-w-3xl mx-auto mb-10 leading-relaxed">
-          I'm an Automation Engineer with a Master's degree in Computer Science from Pace University. 
-          I build practical automation and AI-assisted tools that help people and businesses work more efficiently.
-        </p>
-        
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="#work" className="btn-primary">
-            View my work
-          </a>
-          <a 
-            href="https://www.linkedin.com/in/dineshgopisunkara"
-            target="_blank"
-            rel="noopener noreferrer" 
-            className="btn-secondary"
-          >
-            Connect with me
-          </a>
-        </div>
-        
-        {/* Optional workflow visual */}
-        <div className="mt-20 max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            <div className="card p-6 text-center">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-surface-light flex items-center justify-center">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <p className="text-sm text-muted font-mono">Input</p>
-            </div>
-            
-            <div className="card p-6 text-center blue-glow">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-primary/10 flex items-center justify-center">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <p className="text-sm text-primary font-mono">Automation</p>
-            </div>
-            
-            <div className="card p-6 text-center blue-glow">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-primary/10 flex items-center justify-center">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <p className="text-sm text-primary font-mono">Intelligence</p>
-            </div>
-            
-            <div className="card p-6 text-center">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-surface-light flex items-center justify-center">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <p className="text-sm text-muted font-mono">Result</p>
-            </div>
+    <section id="top" className="relative flex min-h-screen items-center overflow-hidden px-5 pb-16 pt-28 md:px-8">
+      <div className="pointer-events-none absolute inset-0">
+        <div className="neon-bar left-[8%] top-0 hidden h-full w-px opacity-70 md:block" />
+        <div className="neon-bar-pink right-[12%] top-10 hidden h-[75%] w-[2px] opacity-60 md:block" />
+        <div className="glow-orb -left-24 top-24 h-72 w-72 bg-violet-600/30" />
+        <div className="glow-orb bottom-10 right-0 h-80 w-80 bg-cyan-400/20" />
+      </div>
+
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <div>
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.28em] text-neon-cyan">
+            {SITE.shortTitle}
+          </p>
+          <h1 className="font-display text-[3.1rem] leading-[0.92] text-white sm:text-6xl md:text-7xl lg:text-[5.4rem]">
+            <span className="text-neon-cyan">{SITE.firstName}</span>
+            <br />
+            {SITE.lastName}
+            <span className="text-neon-cyan">.</span>
+          </h1>
+          <p className="mt-4 font-mono text-sm text-muted md:text-base">{SITE.title}</p>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80 md:text-xl">
+            {SITE.tagline}
+          </p>
+          <p className="mt-4 max-w-xl text-muted">{SITE.summary}</p>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a href="#work" className="btn-primary">
+              See My Work
+            </a>
+            <a href="#contact" className="btn-secondary">
+              Let&apos;s Talk
+            </a>
           </div>
+        </div>
+
+        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-cyan-400/20 via-fuchsia-500/10 to-transparent blur-2xl" />
+          <figure className="portrait-frame relative mx-auto aspect-[4/5] max-w-[380px] overflow-hidden lg:max-w-[440px]">
+            <img
+              src={SITE.portrait}
+              alt={`${SITE.name}, ${SITE.shortTitle}`}
+              width="460"
+              height="575"
+              className="h-full w-full object-cover object-top"
+            />
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050510] via-[#050510]/40 to-transparent p-5">
+              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-neon-cyan">
+                Controls · Automation
+              </p>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
