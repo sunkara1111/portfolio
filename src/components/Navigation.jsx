@@ -46,6 +46,13 @@ const Navigation = () => {
               {link.label}
             </a>
           ))}
+          <a
+            href={SITE.resume}
+            download={SITE.resumeFileName}
+            className="text-sm text-muted transition-colors hover:text-white"
+          >
+            Resume
+          </a>
         </div>
 
         <div className="flex items-center gap-3">
@@ -86,6 +93,14 @@ const Navigation = () => {
               </a>
             ))}
             <SocialLinks className="pt-2 sm:hidden" />
+            <a
+              href={SITE.resume}
+              download={SITE.resumeFileName}
+              onClick={close}
+              className="font-display text-2xl text-white"
+            >
+              Resume
+            </a>
             <a href="#contact" onClick={close} className="btn-primary w-fit">
               Hire Me
             </a>

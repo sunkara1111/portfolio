@@ -31,6 +31,13 @@ const Hero = () => {
             <a href="#work" className="btn-primary">
               See My Work
             </a>
+            <a
+              href={SITE.resume}
+              download={SITE.resumeFileName}
+              className="btn-secondary"
+            >
+              Download Resume
+            </a>
             <a href="#contact" className="btn-secondary">
               Let&apos;s Talk
             </a>
@@ -43,9 +50,9 @@ const Hero = () => {
             <img
               src={SITE.portrait}
               alt={`${SITE.name}, ${SITE.shortTitle}`}
-              width="460"
-              height="575"
-              className="h-full w-full object-cover object-top"
+              width="720"
+              height="1280"
+              className="h-full w-full object-cover object-[center_18%]"
             />
             <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050510] via-[#050510]/40 to-transparent p-5">
               <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-neon-cyan">
