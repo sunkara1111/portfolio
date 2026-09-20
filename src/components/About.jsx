@@ -49,8 +49,8 @@ const About = () => {
               <img
                 src={SITE.portraitAbout}
                 alt={`${SITE.name} on the Brooklyn Bridge`}
-                width="720"
-                height="1280"
+                width="1206"
+                height="2144"
                 className="h-full w-full object-cover object-[center_18%]"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050510] to-transparent px-6 py-6 text-center">

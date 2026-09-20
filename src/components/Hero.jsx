@@ -55,8 +55,8 @@ const Hero = () => {
               <img
                 src={SITE.portrait}
                 alt={`${SITE.name}, ${SITE.shortTitle}`}
-                width="720"
-                height="1280"
+                width="1206"
+                height="2144"
                 className="h-full w-full object-cover object-[center_18%]"
               />
               <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050510] via-[#050510]/40 to-transparent p-5">
