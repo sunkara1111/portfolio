@@ -47,7 +47,7 @@ const projects = [
     description: 'Next-generation automation control system. Flagship project integrating industrial controls with modern software engineering practices.',
     tags: ['Controls', 'Automation', 'SCADA'],
     liveUrl: 'https://sunkara1111.github.io/aetherline/',
-    status: 'coming-soon',
+    status: 'live',
     featured: true
   }
 ]
