@@ -2,7 +2,7 @@
 
 **Senior Controls Engineer · Automation Engineer**
 
-Netflix Simulated Series portfolio mixed with royal-purple / chrome lighting — pitch-black, compressed title type, monospace body, Netflix-red episode labels and CTAs, and purple lattice atmosphere for industrial controls, automation systems, and AI-assisted tools.
+Dark cyber portfolio for industrial controls, automation systems, and AI-assisted tools. Opens with a full-viewport percentage loader, then a holographic hero — no portrait photos. Accents mix Netflix red (`#E50914`) with deep purple / magenta glows on a black base.
 
 Public branding is the name, role, and GitHub / LinkedIn links only. Do not add “Powered by”, sponsored, or platform HUD badges (GitHub, Netlify, Vercel, or similar).
 
