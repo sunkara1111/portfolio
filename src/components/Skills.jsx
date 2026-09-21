@@ -12,12 +12,13 @@ const poses = [
 ]
 
 const SkillCard = ({ card, index, total }) => (
-  <article className="series-card flex h-full min-h-[280px] flex-col p-6">
+  <article className="series-card lattice-corners flex h-full min-h-[280px] flex-col p-6">
+    <div className="glow-ring" aria-hidden="true" />
     <div className="mb-8 flex items-center justify-between">
       <div className="flex items-center gap-1.5" aria-hidden="true">
         <span className="h-1.5 w-1.5 rounded-full bg-series" />
-        <span className="h-1.5 w-1.5 rounded-full bg-white/25" />
-        <span className="h-1.5 w-1.5 rounded-full bg-white/25" />
+        <span className="h-1.5 w-1.5 rounded-full bg-vibranium/80" />
+        <span className="h-1.5 w-1.5 rounded-full bg-chrome/50" />
       </div>
       <span className="series-tag">
         {pad(index + 1)} / {pad(total)}
@@ -25,7 +26,7 @@ const SkillCard = ({ card, index, total }) => (
     </div>
     <h3 className="font-display text-3xl text-white">{card.title}</h3>
     <p className="mt-4 flex-1 font-mono text-sm leading-relaxed text-muted">{card.blurb}</p>
-    <div className="mt-8 flex flex-wrap gap-2 border-t border-series/30 pt-5">
+    <div className="mt-8 flex flex-wrap gap-2 border-t border-vibranium/35 pt-5">
       {card.chips.map((chip) => (
         <span key={chip} className="tech-pill">
           {chip}
@@ -72,14 +73,16 @@ const Skills = () => {
       <div className="watermark">
         <span className="watermark-word">SKILLS</span>
       </div>
-      <div className="glow-orb -left-10 bottom-10 h-64 w-64 bg-series/15" />
+      <div className="glow-orb -left-10 bottom-10 h-64 w-64 bg-vibranium/20" />
+      <div className="glow-orb right-10 top-24 h-56 w-56 bg-royal/20" />
 
       <div className="relative mx-auto max-w-7xl">
         <p className="series-tag mb-5">Episode 02 / Core competencies</p>
         <h2 className="font-display text-5xl leading-[0.88] text-white sm:text-7xl md:text-8xl">
           Frontend
           <br />
-          <span className="text-series">Backend. Cloud.</span>
+          <span className="text-series">Backend.</span>{' '}
+          <span className="text-vibranium">Cloud.</span>
         </h2>
         <p className="mt-6 max-w-2xl font-mono text-sm text-muted md:text-[15px]">
           Scroll-driven isometric cards for the disciplines that ship: interfaces,

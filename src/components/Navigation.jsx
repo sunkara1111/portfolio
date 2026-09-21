@@ -44,7 +44,7 @@ const Navigation = () => {
       <nav
         className={`transition-all duration-300 ${
           scrolled || open
-            ? 'border-b border-series/30 bg-black/90 backdrop-blur-xl'
+            ? 'border-b border-vibranium/35 bg-black/90 backdrop-blur-xl'
             : 'bg-black/50 backdrop-blur-sm'
         }`}
       >
@@ -82,7 +82,7 @@ const Navigation = () => {
             </button>
             <button
               type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-series/50 text-white lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-vibranium/50 text-white lg:hidden"
               aria-expanded={open}
               aria-label={open ? 'Close menu' : 'Open menu'}
               onClick={() => setOpen((v) => !v)}
@@ -100,7 +100,7 @@ const Navigation = () => {
         </div>
 
         {open && (
-          <div className="border-t border-series/30 bg-black/95 px-6 py-8 lg:hidden">
+          <div className="border-t border-vibranium/30 bg-black/95 px-6 py-8 lg:hidden">
             <div className="flex flex-col gap-5">
               {NAV_LINKS.map((link) => (
                 <a
