@@ -1,0 +1,148 @@
+"""Canonical resume copy for downloadable PDF/DOCX assets.
+
+Keep Pace University M.S. Computer Science plus the LinkedIn and GitHub URLs.
+"""
+
+NAME = "Sunkara Dineshgopi"
+ROLE = "Automation Engineer"
+LOCATION = "Spokane, WA (On-Site)"
+PHONE = "201-284-1559"
+EMAIL = "dineshgopi.sunkara@gmail.com"
+LINKEDIN = "https://www.linkedin.com/in/sunkara-dineshgopi-86464919b"
+LINKEDIN_SHORT = "linkedin.com/in/sunkara-dineshgopi-86464919b"
+GITHUB = "https://github.com/sunkara1111"
+GITHUB_SHORT = "github.com/sunkara1111"
+SITE = "sunkara1111.github.io/portfolio/"
+FOOTER = "Latest resume  |  currently working  |  sunkara1111.github.io/portfolio/"
+
+SUMMARY = (
+    "Results-driven Automation & Controls Engineer and manufacturing quality professional "
+    "specializing in industrial automation, Operational Technology (OT) platforms, Building "
+    "Management Systems (BMS), and software architecture within highly regulated GxP / GMP "
+    "environments. Combines an interdisciplinary foundation across Information Technology (IT) "
+    "and Computer Science (CS) to bridge the gap between physical plant machinery and complex "
+    "software systems. Proven expertise in PLC/DCS architectures, SCADA design (Ignition, AVEVA), "
+    "full-stack microservices development, cloud deployment, and strict data integrity compliance "
+    "across pharmaceutical and industrial manufacturing lines."
+)
+
+EXPERIENCE = [
+    {
+        "company": "Jubilant HollisterStier",
+        "location": "Spokane, WA (On-Site)",
+        "dates": "Jun 2026 – Present",
+        "role": "Automation Engineer",
+        "bullets": [
+            "Develop custom Ignition SCADA modules using Python and JavaScript scripting to automate data processing from vision sensors and generate dynamic operator dashboards for real-time plant monitoring.",
+            "Design and implement an automated quality control system integrating Rockwell PLCs with AVEVA SCADA for centralized monitoring and real-time visualization of inspection metrics.",
+            "Direct the integration, programming, and troubleshooting of control systems with sterile fill-finish lines, managing automated workflows across laboratory and pharmaceutical manufacturing environments.",
+            "Configure and validate ODBC and DSN connectivity between OT applications and SQL Server databases to support Environmental Monitoring Systems (EMS) and OT data capture on filling lines.",
+            "Integrate automation systems with SQL Server databases for production data logging, compliance reporting, and Manufacturing Execution System (MES) transactions while executing structured system risk assessments.",
+        ],
+    },
+    {
+        "company": "Source Sphere LLC",
+        "location": "Edison, NJ (Hybrid)",
+        "dates": "Nov 2025 – Jun 2026",
+        "role": "Software Engineer",
+        "bullets": [
+            "Architected, developed, and deployed scalable Java-based applications and microservices using Spring Boot and Hibernate, seamlessly linking core CS algorithms with resilient IT infrastructure.",
+            "Designed and integrated high-performance RESTful and SOAP-based web services to optimize application communication and ensure smooth UI integration with frontend engineering teams.",
+            "Managed end-to-end data modeling, schema design, and complex query development utilizing MySQL, PostgreSQL, and MongoDB, maintaining strict data integrity and performance standards.",
+            "Drove continuous integration and deployment (CI/CD) workflows by contributing to automated pipelines using Jenkins, Git, and Docker across AWS and Azure cloud platforms.",
+            "Guided the full Software Development Lifecycle (SDLC), ensuring code reliability through JUnit and Mockito unit testing, conducting peer code reviews, and optimizing performance via caching and code tuning.",
+        ],
+    },
+    {
+        "company": "Andhra Pradesh State Skill Development Corporation (APSSDC)",
+        "location": "Andhra Pradesh, India",
+        "dates": "Apr 2019 – Apr 2020",
+        "role": "Intern – Industrial Automation & Controls",
+        "bullets": [
+            "Gained hands-on exposure to core manufacturing industry ecosystems, industrial automation workflows, embedded microcontrollers, and production line lifecycles.",
+            "Developed a foundational understanding of industrial control logic, including how Programmable Logic Controllers (PLCs) interface with supervisory software architectures to manage plant floor equipment.",
+            "Studied manufacturing documentation standards, safety regulations, and data tracking methods used to ensure precision, structural reliability, and operational continuity in fast-paced production environments.",
+            "Participated in cross-functional technical workshops aimed at deploying hardware-software integrations, sharpening troubleshooting, technical analysis, and systems validation capabilities.",
+        ],
+    },
+]
+
+EDUCATION = [
+    {
+        "credential": "Master of Science (M.S.) in Computer Science",
+        "dates": "Sep 2023 – May 2025",
+        "school": "Pace University – Seidenberg School of CS & IS, New York, NY (GPA: 3.55 / 4.0)",
+    }
+]
+
+SKILLS = [
+    (
+        "Automation & Control Systems",
+        "PLC (Allen-Bradley, Siemens), DCS (DeltaV), SCADA (Ignition, FactoryTalk View, AVEVA), HMI Development, Vision Sensors, Sterile Fill-Finish Lines",
+    ),
+    (
+        "Programming & Configuration",
+        "Rockwell Studio 5000, RSLogix 500/5000, Ladder Logic, Structured Text, Python, JavaScript, Java (Spring Boot, Hibernate), SQL",
+    ),
+    (
+        "MES & Digital Systems",
+        "Syncade, MasterControl, Electronic Batch Records (EBR), Recipe Authoring, MES–DCS Integration, MES Transactions",
+    ),
+    (
+        "Validation & Compliance",
+        "GMP, GxP, 21 CFR Part 11, GAMP 5, IQ/OQ/UAT, FAT/SAT, Change Control, CAPA, Data Integrity, System Risk Assessment",
+    ),
+    (
+        "Batch & Process Standards",
+        "ISA S88, ISA S95, Batch Process Design, Recipe Management, Process Optimization",
+    ),
+    (
+        "Networking/Integration",
+        "OPC, Ethernet/IP, Industrial Networks, System Integration, SQL Server (ODBC/DSN Connectivity), Data Historians (OSI PI)",
+    ),
+    (
+        "Building & Utility Systems",
+        "BAS/BMS (Siemens Desigo, Insight), Environmental Monitoring Systems (EMS), Cleanroom Systems, Process Equipment Integration",
+    ),
+    (
+        "Troubleshooting & Maintenance",
+        "Root Cause Analysis (RCA), PLC/SCADA Diagnostics, I/O & Communication Failures, Preventive Maintenance",
+    ),
+    (
+        "Software & Cloud Infrastructure",
+        "Microservices Architecture, RESTful & SOAP Web Services, Docker, Jenkins, Git, AWS, Azure, CI/CD Pipelines, JUnit, Mockito",
+    ),
+]
+
+
+def plain_text():
+    lines = [
+        NAME,
+        f"{ROLE}  |  Latest resume  |  currently working",
+        f"{LOCATION}  |  {PHONE}  |  {EMAIL}",
+        f"{LINKEDIN_SHORT}  |  {GITHUB_SHORT}",
+        "",
+        "SUMMARY",
+        SUMMARY,
+        "",
+        "EXPERIENCE",
+    ]
+    for job in EXPERIENCE:
+        lines.append(f"{job['company']} | {job['location']}")
+        lines.append(job["dates"])
+        lines.append(job["role"])
+        for bullet in job["bullets"]:
+            lines.append(f"- {bullet}")
+        lines.append("")
+    lines.append("EDUCATION")
+    for item in EDUCATION:
+        lines.append(item["credential"])
+        lines.append(item["dates"])
+        lines.append(item["school"])
+        lines.append("")
+    lines.append("SKILLS")
+    for label, detail in SKILLS:
+        lines.append(f"{label}: {detail}")
+    lines.append("")
+    lines.append(FOOTER)
+    return "\n".join(lines)

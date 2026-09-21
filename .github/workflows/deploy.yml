@@ -31,6 +31,9 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
+
+      - name: Check resume and education copy
+        run: python3 scripts/check-resume-content.py
         
       - name: Build
         run: npm run build
