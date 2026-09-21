@@ -3,7 +3,7 @@ export const SITE = {
   firstName: 'Dineshgopi',
   lastName: 'Sunkara',
   title: 'Senior Controls Engineer / Automation Engineer',
-  shortTitle: 'Automation Engineer',
+  shortTitle: 'Senior Controls Engineer',
   tagline:
     'Architecting robust automation and full-stack systems — plant-floor platforms, MES integrations, and software operators can actually run.',
   summary:
@@ -23,26 +23,10 @@ export const SITE = {
   resumeFileName: 'Sunkara-Dineshgopi-Resume.pdf',
 }
 
-export const SERIES = {
-  label: 'NETFLIX SIMULATED SERIES',
-  seasons: 'SEASONS 2019 — 2026',
-  wordmark: 'SUNKARA',
-  roleLine: 'DEV.ENGINE',
-  badgeTop: 'TOP 1%',
-  badge: 'AUTOMATION ENGINEER & PROBLEM SOLVER',
-  chips: ['React', 'Node.js', 'Python', 'Ignition', 'PLC'],
-  engineered: 'ENGINEERED FOR SCALABILITY',
-  version: 'PORTFOLIO.CINEMATIC // v2.0.26',
-  featureLabel: 'FEATURE 01',
-}
-
-export const NAV_LINKS = [
-  { href: '#top', label: 'Home' },
-  { href: '#about', label: 'About' },
-  { href: '#expertise', label: 'Expertise' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#work', label: 'Projects' },
-  { href: '#contact', label: 'Contact' },
+export const HERO_STATS = [
+  { value: '07', label: 'Live systems' },
+  { value: 'MS', label: 'Pace University' },
+  { value: 'OT', label: 'Controls · SCADA' },
 ]
 
 export const EXPERIENCE = [
@@ -92,11 +76,17 @@ export const EDUCATION = [
   },
 ]
 
+export const NAV_LINKS = [
+  { href: '#about', label: 'About' },
+  { href: '#work', label: 'Work' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#contact', label: 'Contact' },
+]
+
 export const PROJECTS = [
   {
     id: 1,
     title: 'Pilot',
-    category: 'PRODUCTIVITY',
     description:
       'Free hub for communication, business writing, resumes, and message analysis. Practical productivity tools with secure backend architecture.',
     tags: ['Productivity', 'Communication', 'Tools'],
@@ -104,12 +94,12 @@ export const PROJECTS = [
     extraLinks: [{ label: 'Reply tool', href: 'https://get-pilot-app.netlify.app/tools/reply' }],
     githubUrl: 'https://github.com/sunkara1111/pilot',
     status: 'live',
-    episode: '01',
+    accent: 'from-series/80 via-rose-900 to-[#120408]',
+    art: 'pulse',
   },
   {
     id: 2,
     title: 'StatusPass',
-    category: 'COMPLIANCE',
     description:
       'F-1 / CPT / OPT / STEM OPT compliance organizer for international students in the United States. Tracks visa and work-authorization clocks so the next action is clear.',
     tags: ['F-1', 'CPT', 'OPT', 'STEM OPT'],
@@ -117,35 +107,35 @@ export const PROJECTS = [
     githubUrl: 'https://github.com/sunkara1111/statuspass',
     status: 'live',
     disclaimer: 'Not a law firm or DSO',
-    episode: '02',
+    accent: 'from-violet-500/80 via-fuchsia-800 to-[#080410]',
+    art: 'orbit',
   },
   {
     id: 3,
     title: 'AdForge',
-    category: 'ADTECH',
     description:
       'AI-powered advertising platform for creating, managing, and optimizing digital ad campaigns with intelligent automation and analytics.',
     tags: ['AI', 'Marketing', 'Automation'],
     liveUrl: 'https://adforge-sunkara.vercel.app/',
     status: 'live',
-    episode: '03',
+    accent: 'from-fuchsia-500/70 via-violet-800 to-[#0a0614]',
+    art: 'bars',
   },
   {
     id: 4,
     title: 'DGS AI',
-    category: 'INTELLIGENCE',
     description:
       'Intelligent assistant platform leveraging advanced AI models for natural language processing and task automation.',
     tags: ['AI', 'NLP', 'Assistant'],
     liveUrl: 'https://sunkara1111.github.io/dgs-ai/',
     githubUrl: 'https://github.com/sunkara1111/dgs-ai',
     status: 'live',
-    episode: '04',
+    accent: 'from-rose-500/80 via-violet-900 to-[#10040c]',
+    art: 'wave',
   },
   {
     id: 5,
     title: 'AI Fund',
-    category: 'RESEARCH',
     description:
       'Sunkara AI Fund — experimental AI-driven hedge fund research. Academic project exploring algorithmic trading strategies and market analysis. Paper / research only.',
     tags: ['AI', 'Research', 'Finance'],
@@ -153,78 +143,33 @@ export const PROJECTS = [
     githubUrl: 'https://github.com/sunkara1111/ai-hedge-fund',
     status: 'live',
     disclaimer: 'Research & experimental project',
-    episode: '05',
+    accent: 'from-violet-400/80 via-purple-900 to-[#060410]',
+    art: 'nodes',
   },
   {
     id: 6,
     title: 'Aetherline',
-    category: 'CONTROLS',
     description:
       'Next-generation automation control system integrating industrial controls with modern software engineering practices.',
     tags: ['Controls', 'Automation', 'SCADA'],
     liveUrl: 'https://sunkara1111.github.io/aetherline/',
     githubUrl: 'https://github.com/sunkara1111/aetherline',
     status: 'live',
-    episode: '06',
+    accent: 'from-series/70 via-violet-900 to-[#120208]',
+    art: 'wave',
   },
   {
     id: 7,
     title: 'Client Kickoff',
-    category: 'WORKFLOW',
     description:
       'Streamlined client onboarding and project kickoff management system designed to automate initial engagement workflows.',
     tags: ['Automation', 'Workflow', 'Management'],
     liveUrl: 'https://sunkara1111.github.io/client-kickoff-system-free/',
     githubUrl: 'https://github.com/sunkara1111/client-kickoff-system-free',
     status: 'live',
-    episode: '07',
+    accent: 'from-fuchsia-500/70 via-violet-800 to-[#0a0614]',
+    art: 'grid',
   },
-]
-
-export const SKILL_CARDS = [
-  {
-    title: 'Frontend Engineering',
-    blurb:
-      'Crafting responsive, operator-ready interfaces with React, modern JavaScript, and production CSS — dashboards people can actually run.',
-    chips: ['React', 'JavaScript', 'HTML/CSS'],
-  },
-  {
-    title: 'Backend & Databases',
-    blurb:
-      'Building secure REST APIs, authentication, and high-performance data layers across Java, Python, SQL, and document stores.',
-    chips: ['Java', 'Python', 'SQL'],
-  },
-  {
-    title: 'Cloud & DevOps',
-    blurb:
-      'Deploying and operating production applications with Docker, CI/CD, AWS, and Azure — repeatable pipelines, not one-off servers.',
-    chips: ['AWS', 'Azure', 'Docker'],
-  },
-  {
-    title: 'Controls & Automation',
-    blurb:
-      'Industrial control software — PLC logic, Ignition / AVEVA SCADA, and MES transactions in regulated GxP / GMP environments.',
-    chips: ['PLC', 'Ignition', 'SCADA'],
-  },
-  {
-    title: 'AI & Machine Learning',
-    blurb:
-      'Practical AI assistants and automation tools — language models applied to real operator, writing, and business workflows.',
-    chips: ['NLP', 'LLMs', 'Python'],
-  },
-]
-
-export const TECH_STACK = [
-  'REACT',
-  'NODE.JS',
-  'PYTHON',
-  'JAVA',
-  'IGNITION',
-  'ALLEN-BRADLEY',
-  'AVEVA',
-  'AWS',
-  'AZURE',
-  'DOCKER',
 ]
 
 export const SKILLS = [
@@ -255,4 +200,11 @@ export const SKILLS = [
       { name: 'Continuous Improvement', detail: 'Iterate against live operations' },
     ],
   },
+]
+
+export const ABOUT_ORBITS = [
+  { label: 'PLC / SCADA', className: 'top-3 -left-8 sm:-left-20' },
+  { label: 'Automation', className: 'top-1/4 -right-8 sm:-right-20' },
+  { label: 'AI Tools', className: 'bottom-28 -left-6 sm:-left-16' },
+  { label: 'MES', className: 'bottom-8 -right-6 sm:-right-16' },
 ]
