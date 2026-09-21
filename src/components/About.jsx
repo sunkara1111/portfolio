@@ -50,7 +50,7 @@ const About = () => {
           ))}
           <CinematicPortrait
             src={SITE.portraitAbout}
-            alt={`${SITE.name} portrait`}
+            alt={`${SITE.name}, professional portrait`}
             crop="about"
           />
         </div>
