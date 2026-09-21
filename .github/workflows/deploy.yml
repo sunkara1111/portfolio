@@ -32,13 +32,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
         
+      - name: Guard Pages (no CNAME until DNS)
+        run: bash scripts/check-pages.sh
+
       - name: Build
         run: npm run build
 
-      - name: Verify Pages CNAME
-        run: |
-          test -f dist/CNAME
-          grep -qx 'portfolio.sunkaraops.com' dist/CNAME
+      - name: Guard dist (no published CNAME)
+        run: bash scripts/check-pages.sh
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

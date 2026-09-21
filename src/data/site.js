@@ -16,7 +16,7 @@ export const SITE = {
   email: 'dineshgopi.sunkara@gmail.com',
   phone: '201-284-1559',
   phoneHref: 'tel:+12012841559',
-  siteUrl: 'https://portfolio.sunkaraops.com/',
+  siteUrl: 'https://sunkara1111.github.io/portfolio/',
   portrait: `${import.meta.env.BASE_URL}portrait-hero.jpg`,
   portraitAbout: `${import.meta.env.BASE_URL}portrait-about.jpg`,
   resume: `${import.meta.env.BASE_URL}resume.pdf`,

@@ -8,15 +8,13 @@ Public branding is the name, role, and GitHub / LinkedIn links only. Do not add 
 
 ## Live Site
 
-**https://portfolio.sunkaraops.com/** (GitHub Pages custom domain)
-
-GitHub Pages project URL (stays available; GitHub redirects it to the custom domain after DNS / HTTPS verify):
-
 **https://sunkara1111.github.io/portfolio/**
+
+There is **no** repo-root `CNAME` and **no** `public/CNAME`. `portfolio.sunkaraops.com` DNS does not resolve (`sunkaraops.com` Netlify DNS is on another team). A committed CNAME would make GitHub Pages **301** this github.io URL to that dead host and take the live site down. Re-add CNAME (copy `docs/CNAME.example`) **only after** a DNS CNAME `portfolio` → `sunkara1111.github.io` exists. See `DOMAIN.md`.
 
 - GitHub: [github.com/sunkara1111](https://github.com/sunkara1111)
 - LinkedIn: [linkedin.com/in/sunkara-dineshgopi-86464919b](https://www.linkedin.com/in/sunkara-dineshgopi-86464919b)
-- Resume: [Latest resume (PDF)](https://portfolio.sunkaraops.com/resume.pdf)
+- Resume: [Latest resume (PDF)](https://sunkara1111.github.io/portfolio/resume.pdf)
 
 ## Tech Stack
 
@@ -36,40 +34,21 @@ GitHub Pages project URL (stays available; GitHub redirects it to the custom dom
 6. **Aetherline** — Next-gen automation control system ([Live](https://sunkara1111.github.io/aetherline/) | [GitHub](https://github.com/sunkara1111/aetherline))
 7. **Client Kickoff** — Streamlined onboarding automation ([Live](https://sunkara1111.github.io/client-kickoff-system-free/) | [GitHub](https://github.com/sunkara1111/client-kickoff-system-free))
 
-## Custom domain (GitHub Pages)
+## Custom domain (not live)
 
-Hostname: **portfolio.sunkaraops.com**
+Intended hostname: `portfolio.sunkaraops.com` — **do not enable until DNS exists.**
 
-This repo publishes with **GitHub Actions** (not `/docs`). Vite copies `public/` into `dist/`, so the file GitHub Pages reads is `public/CNAME`. A matching `CNAME` is also at the repo root.
+This repo publishes with **GitHub Actions** (Vite `public/` → `dist/`), not `/docs`. GitHub Pages reads a `CNAME` from the published `dist/` **and** from the repo root. Either file 301s `https://sunkara1111.github.io/portfolio/` to that hostname.
 
-### Files
+1. Confirm DNS: CNAME `portfolio` → `sunkara1111.github.io` (`dig +short CNAME portfolio.sunkaraops.com`).
+2. Copy `docs/CNAME.example` to repo-root `CNAME` **and** `public/CNAME` (one line, no protocol).
+3. Repo **Settings → Pages → Custom domain**: `portfolio.sunkaraops.com`. Keep **Enforce HTTPS** after TLS provisions.
+4. Point canonical, Open Graph, JSON-LD, sitemap, robots, and `SITE.siteUrl` at the new origin.
+5. Update `scripts/check-pages.sh` so CI no longer rejects the live CNAME.
 
-- `CNAME` (repo root) and `public/CNAME` — one line, no protocol, no path:
+`vite.config.js` uses a relative `base` (`./`) so the same assets work at github.io/portfolio/ today and at a custom-domain root later.
 
-```
-portfolio.sunkaraops.com
-```
-
-### DNS (owner of sunkaraops.com)
-
-Create a **CNAME** record:
-
-| Host | Type | Value |
-| --- | --- | --- |
-| `portfolio` | CNAME | `sunkara1111.github.io` |
-
-Do not point this hostname at Netlify or Vercel. Apex (`sunkaraops.com`) is not used for this site.
-
-### GitHub Pages setting
-
-1. Repo **Settings → Pages**.
-2. **Custom domain**: `portfolio.sunkaraops.com` (GitHub often fills this from the published `CNAME` after the next deploy to `main`).
-3. Wait for DNS check to pass, then keep **Enforce HTTPS** on.
-4. Publishing source stays **GitHub Actions**.
-
-`vite.config.js` uses a relative `base` (`./`) so assets resolve both at `https://sunkara1111.github.io/portfolio/` and at the custom-domain root. Canonical, Open Graph, JSON-LD, `public/sitemap.xml`, and `public/robots.txt` use `https://portfolio.sunkaraops.com/`.
-
-Until DNS is live, the GitHub Pages URL continues to serve the site.
+Canonical, Open Graph, JSON-LD, `public/sitemap.xml`, and `public/robots.txt` stay on **https://sunkara1111.github.io/portfolio/** until that cutover.
 
 ## Development
 

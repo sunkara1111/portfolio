@@ -7,4 +7,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://portfolio.sunkaraops.com/sitemap.xml
+Sitemap: https://sunkara1111.github.io/portfolio/sitemap.xml
