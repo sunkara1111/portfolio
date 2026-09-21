@@ -2,7 +2,7 @@
 
 **Senior Controls Engineer · Automation Engineer**
 
-Netflix Developer Series portfolio — full black, high-contrast white type, and red series accents for industrial controls, automation systems, and AI-assisted tools.
+Netflix Simulated Series portfolio — pitch-black, compressed title type, monospace body, and Netflix-red accents for industrial controls, automation systems, and AI-assisted tools.
 
 Public branding is the name, role, and GitHub / LinkedIn links only. Do not add “Powered by”, sponsored, or platform HUD badges (GitHub, Netlify, Vercel, or similar).
 

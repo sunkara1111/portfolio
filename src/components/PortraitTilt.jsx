@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 
+const REST = { x: -11, y: 16 }
+
 const PortraitTilt = ({ children, className = '' }) => {
   const ref = useRef(null)
-  const [tilt, setTilt] = useState({ x: 0, y: 0 })
+  const [tilt, setTilt] = useState(REST)
   const [reduce, setReduce] = useState(false)
 
   useEffect(() => {
@@ -20,10 +22,10 @@ const PortraitTilt = ({ children, className = '' }) => {
     const box = node.getBoundingClientRect()
     const px = (event.clientX - box.left) / box.width - 0.5
     const py = (event.clientY - box.top) / box.height - 0.5
-    setTilt({ x: py * -7, y: px * 9 })
+    setTilt({ x: REST.x + py * -8, y: REST.y + px * 10 })
   }
 
-  const reset = () => setTilt({ x: 0, y: 0 })
+  const reset = () => setTilt(REST)
 
   return (
     <div className={`portrait-stage-wrap ${className}`}>
