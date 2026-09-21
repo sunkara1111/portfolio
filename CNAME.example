@@ -1,5 +1,11 @@
-# GitHub Pages custom-domain template.
-# Live hostname is in public/CNAME (copied into the Pages artifact on build).
-# Registrar DNS cannot be set from this repo — see README.md.
+# Do NOT copy this into public/CNAME until DNS for the hostname
+# actually resolves. A published CNAME file makes GitHub Pages 301
+# https://sunkara1111.github.io/portfolio/ to the custom domain and
+# will break the live site if that hostname is NXDOMAIN.
+#
+# Intended hostname (registrar DNS only — this repo cannot set it):
+#   Type  CNAME
+#   Host  portfolio
+#   Value sunkara1111.github.io
 #
 # portfolio.sunkaraops.com

@@ -10,8 +10,6 @@ Public branding is the name, role, and GitHub / LinkedIn links only. Do not add 
 
 **https://sunkara1111.github.io/portfolio/**
 
-Intended custom domain (DNS must be set at the registrar — this repo cannot do that): **https://portfolio.sunkaraops.com/**
-
 - GitHub: [github.com/sunkara1111](https://github.com/sunkara1111)
 - LinkedIn: [linkedin.com/in/sunkara-dineshgopi-86464919b](https://www.linkedin.com/in/sunkara-dineshgopi-86464919b)
 - Resume: [Latest resume (PDF)](https://sunkara1111.github.io/portfolio/resume.pdf)
@@ -34,32 +32,21 @@ Intended custom domain (DNS must be set at the registrar — this repo cannot do
 6. **Aetherline** — Next-gen automation control system ([Live](https://sunkara1111.github.io/aetherline/) | [GitHub](https://github.com/sunkara1111/aetherline))
 7. **Client Kickoff** — Streamlined onboarding automation ([Live](https://sunkara1111.github.io/client-kickoff-system-free/) | [GitHub](https://github.com/sunkara1111/client-kickoff-system-free))
 
-## Custom domain (GitHub Pages)
+## Custom domain (DNS only)
 
-Repo support for **`portfolio.sunkaraops.com`** is in `public/CNAME`. Vite `base` stays **`/portfolio/`** so the current live URL `https://sunkara1111.github.io/portfolio/` keeps working. This repo cannot create or pay for a domain, and it cannot change registrar DNS.
+Do **not** add a `CNAME` file or GitHub Pages custom domain in this repo. Publishing `public/CNAME` makes Pages **301** `https://sunkara1111.github.io/portfolio/` to that hostname. If DNS is missing (NXDOMAIN), the live site goes down.
 
-### DNS (set at the registrar that owns `sunkaraops.com`)
+This repo cannot buy a domain or change registrar DNS. Vite `base` stays **`/portfolio/`**.
 
-Add a **CNAME** for the `portfolio` host only (no `https://`, no path):
+When you own `sunkaraops.com`, set this record at the registrar **first** and wait until it resolves:
 
 | Type | Host / Name | Value / Target |
 | --- | --- | --- |
 | CNAME | `portfolio` | `sunkara1111.github.io` |
 
-Optional apex (`sunkaraops.com` itself) is **not** required for this subdomain. If you later point the apex at GitHub Pages, use A records `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
+Check with `dig CNAME portfolio.sunkaraops.com` — it must return `sunkara1111.github.io`. Optional apex (`@`) A records for GitHub Pages are `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` (not required for the subdomain).
 
-TTL 300–3600 is fine. After DNS is published:
-
-1. Repo **Settings → Pages → Custom domain** should show `portfolio.sunkaraops.com` (the CNAME file in the Pages artifact also sets this).
-2. Wait for the DNS check, then enable **Enforce HTTPS**.
-3. Until that check passes, keep using `https://sunkara1111.github.io/portfolio/`.
-
-### Path after the custom domain is live
-
-GitHub Pages project sites are served at the **root** of a custom domain. This build still references `/portfolio/` assets so github.io keeps working. After HTTPS is green on `portfolio.sunkaraops.com`:
-
-- If `https://portfolio.sunkaraops.com/` loads HTML but CSS/JS 404, change `base` in `vite.config.js` from `'/portfolio/'` to `'/'` and update canonical / Open Graph / JSON-LD / `public/sitemap.xml` / `public/robots.txt` to `https://portfolio.sunkaraops.com/`.
-- Do not change `base` before DNS actually resolves — that would break the github.io URL.
+Do not commit `public/CNAME` from this repo until that lookup succeeds **and** you are ready to cut github.io over to the custom domain. Until then the live site is **https://sunkara1111.github.io/portfolio/**.
 
 ## Development
 
