@@ -1,137 +1,77 @@
 import React from 'react'
-import { ABOUT_ORBITS, EDUCATION, EXPERIENCE, SITE } from '../data/site'
-
-const facts = [
-  { label: 'Current role', value: `${EXPERIENCE[0].role} · ${EXPERIENCE[0].company}` },
-  { label: 'Education', value: SITE.education },
-  { label: 'University', value: SITE.university },
-  { label: 'Focus', value: 'OT, SCADA, and GxP / GMP automation' },
-]
+import { EDUCATION, EXPERIENCE, SITE } from '../data/site'
 
 const About = () => {
+  const current = EXPERIENCE[0]
+
   return (
-    <section id="about" className="relative px-5 py-24 md:px-8 md:py-32">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="glow-orb right-0 top-20 h-72 w-72 bg-cyan-400/10" />
+    <section id="about" className="relative overflow-hidden px-5 py-24 md:px-8 md:py-32">
+      <div className="watermark">
+        <span className="watermark-word">ORIGINATE</span>
       </div>
+      <div className="relative mx-auto max-w-7xl">
+        <p className="series-tag mb-5">Episode 01 / About the engineer</p>
+        <h2 className="max-w-4xl font-display text-4xl font-extrabold uppercase leading-[0.92] tracking-[-0.04em] text-white sm:text-6xl md:text-7xl">
+          Episode synopsis
+          <br />
+          <span className="text-white">Origin </span>
+          <span className="text-series">&amp; Vision.</span>
+        </h2>
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
-        <div>
-          <p className="mb-4 font-mono text-xs uppercase tracking-[0.28em] text-neon-purple">
-            About
-          </p>
-          <h2 className="font-display text-4xl leading-[1.02] text-white sm:text-5xl md:text-6xl">
-            Building at the intersection of{' '}
-            <span className="italic text-white">control</span> &{' '}
-            <span className="italic text-neon-cyan">intelligence</span>.
-          </h2>
-          <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
-            I&apos;m {SITE.name}, an Automation Engineer at Jubilant HollisterStier in Spokane,
-            WA, with an {SITE.education} from {SITE.university}. I work across industrial
-            automation, OT platforms, and software architecture in regulated GxP / GMP
-            environments.
-          </p>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
-            The work lives between plant-floor controls and modern software: PLC / DCS
-            architectures, SCADA (Ignition, AVEVA), MES transactions, and interfaces operators
-            can actually use.
-          </p>
-        </div>
-
-        <div className="relative mx-auto w-full max-w-md">
-          {ABOUT_ORBITS.map((orbit) => (
-            <span
-              key={orbit.label}
-              className={`orbit-chip absolute z-10 ${orbit.className}`}
-            >
-              {orbit.label}
-            </span>
-          ))}
-          <div className="hud-panel overflow-hidden p-8">
-            <div className="mb-6 flex items-center justify-between">
-              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-neon-cyan">
-                Profile
-              </span>
-              <span className="h-2 w-2 rounded-full bg-neon-cyan shadow-[0_0_12px_#00e5ff]" />
-            </div>
-            <p className="font-display text-4xl leading-none text-white">
-              {SITE.firstName}
-              <br />
-              {SITE.lastName}.
+        <div className="mt-12 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+          <article className="series-card p-7 md:p-9">
+            <p className="series-tag">Biography</p>
+            <p className="mt-5 text-lg leading-relaxed text-white/80">
+              I&apos;m {SITE.name}, an Automation Engineer at {current.company} in Spokane, WA,
+              with an {SITE.education} from {SITE.university}. I work across industrial
+              automation, OT platforms, and software architecture in regulated GxP / GMP
+              environments.
             </p>
-            <p className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-white/70">
-              {SITE.title}
+            <p className="mt-4 text-base leading-relaxed text-muted">
+              The work lives between plant-floor controls and modern software: PLC / DCS
+              architectures, SCADA (Ignition, AVEVA), MES transactions, and interfaces
+              operators can actually use.
             </p>
-            <div className="mt-8 grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
+            <dl className="mt-8 grid gap-4 sm:grid-cols-2">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Now</p>
-                <p className="mt-1 text-sm text-white">{EXPERIENCE[0].company}</p>
+                <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Current role</dt>
+                <dd className="mt-1 text-sm text-white">{current.role} · {current.company}</dd>
               </div>
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-wider text-muted">School</p>
-                <p className="mt-1 text-sm text-white">{SITE.university} · MS</p>
+                <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Education</dt>
+                <dd className="mt-1 text-sm text-white">{SITE.education} · {SITE.university}</dd>
               </div>
-            </div>
-          </div>
+              <div>
+                <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Focus</dt>
+                <dd className="mt-1 text-sm text-white">OT, SCADA, and GxP / GMP automation</dd>
+              </div>
+              <div>
+                <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">Links</dt>
+                <dd className="mt-1 text-sm text-white">
+                  <a className="hover:text-series" href={SITE.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  {' · '}
+                  <a className="hover:text-series" href={SITE.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+                </dd>
+              </div>
+            </dl>
+          </article>
+
+          <article className="series-card p-7 md:p-9">
+            <p className="series-tag">Episode notes</p>
+            {EDUCATION.map((item) => (
+              <div key={item.credential} className="mt-5">
+                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/40">{item.dates}</p>
+                <p className="mt-2 font-display text-2xl text-white">{item.credential}</p>
+                <p className="mt-1 text-sm text-muted">{item.school}</p>
+                {item.detail && <p className="mt-1 text-sm text-muted">{item.detail}</p>}
+              </div>
+            ))}
+            <p className="mt-8 text-sm leading-relaxed text-muted">
+              Career seasons run from industrial automation training through software
+              engineering and into pharmaceutical fill-finish controls — 2019 to now.
+            </p>
+          </article>
         </div>
-      </div>
-
-      <div className="mx-auto mt-16 grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {facts.map((fact) => (
-          <div key={fact.label} className="hud-panel p-5">
-            <p className="font-mono text-xs uppercase tracking-wider text-muted">{fact.label}</p>
-            <p className="mt-2 text-sm font-medium text-white">{fact.value}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="mx-auto mt-16 max-w-7xl">
-        <p className="font-mono text-xs uppercase tracking-[0.28em] text-neon-cyan">
-          Experience
-        </p>
-        <ul className="mt-6 grid gap-4 lg:grid-cols-2">
-          {EXPERIENCE.map((job) => (
-            <li key={`${job.company}-${job.dates}`} className="neon-card p-6">
-              <div className="flex flex-wrap items-center gap-2">
-                {job.current && (
-                  <span className="rounded-full border border-cyan-300/40 bg-cyan-400/10 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-neon-cyan">
-                    Current
-                  </span>
-                )}
-                <p className="font-mono text-xs uppercase tracking-wider text-muted">
-                  {job.dates}
-                </p>
-              </div>
-              <p className="mt-2 font-display text-xl text-white">{job.role}</p>
-              <p className="mt-1 text-sm text-muted">
-                {job.company} · {job.location}
-              </p>
-              {job.highlights && (
-                <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted">
-                  {job.highlights.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="mx-auto mt-12 max-w-7xl">
-        <p className="font-mono text-xs uppercase tracking-[0.28em] text-neon-purple">
-          Education
-        </p>
-        <ul className="mt-6 grid gap-4">
-          {EDUCATION.map((item) => (
-            <li key={item.credential} className="neon-card p-6">
-              <p className="font-mono text-xs uppercase tracking-wider text-muted">{item.dates}</p>
-              <p className="mt-2 font-display text-xl text-white">{item.credential}</p>
-              <p className="mt-1 text-sm text-muted">{item.school}</p>
-              {item.detail && <p className="mt-1 text-sm text-muted">{item.detail}</p>}
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   )

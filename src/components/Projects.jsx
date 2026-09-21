@@ -2,82 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { PROJECTS } from '../data/site'
 import { GitHubIcon } from './icons'
 
-const ProjectArt = ({ art, accent }) => {
-  const stroke = 'rgba(255,255,255,0.85)'
-  return (
-    <div className={`project-gloss relative h-44 overflow-hidden bg-gradient-to-br ${accent}`}>
-      <div className="absolute inset-0 bg-black/35" />
-      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 320 176" fill="none" aria-hidden="true">
-        {art === 'wave' && (
-          <path
-            d="M0 118 C40 78, 80 158, 120 98 S200 48, 240 88 S300 138, 320 78"
-            stroke={stroke}
-            strokeWidth="3"
-          />
-        )}
-        {art === 'bars' &&
-          [40, 80, 120, 160, 200, 240, 280].map((x, i) => (
-            <rect
-              key={x}
-              x={x}
-              y={28 + (i % 4) * 14}
-              width="18"
-              height={128 - (i % 4) * 14}
-              rx="4"
-              fill="rgba(255,255,255,0.28)"
-            />
-          ))}
-        {art === 'nodes' && (
-          <>
-            <circle cx="70" cy="88" r="8" fill={stroke} />
-            <circle cx="160" cy="50" r="8" fill={stroke} />
-            <circle cx="160" cy="126" r="8" fill={stroke} />
-            <circle cx="250" cy="88" r="8" fill={stroke} />
-            <path d="M70 88 L160 50 L250 88 L160 126 Z" stroke={stroke} strokeWidth="2" />
-          </>
-        )}
-        {art === 'orbit' && (
-          <>
-            <ellipse cx="160" cy="88" rx="110" ry="46" stroke={stroke} strokeWidth="2" />
-            <ellipse cx="160" cy="88" rx="70" ry="28" stroke="rgba(255,255,255,0.5)" />
-            <circle cx="160" cy="88" r="10" fill={stroke} />
-            <circle cx="250" cy="60" r="6" fill={stroke} />
-          </>
-        )}
-        {art === 'grid' &&
-          Array.from({ length: 6 }).map((_, r) =>
-            Array.from({ length: 10 }).map((__, c) => (
-              <circle
-                key={`${r}-${c}`}
-                cx={24 + c * 30}
-                cy={24 + r * 26}
-                r={r === 2 && c === 4 ? 5 : 2}
-                fill="rgba(255,255,255,0.7)"
-              />
-            ))
-          )}
-        {art === 'pulse' && (
-          <>
-            <path d="M20 96 H90 L110 44 L140 140 L170 76 L200 96 H300" stroke={stroke} strokeWidth="3" />
-            <circle cx="140" cy="140" r="5" fill={stroke} />
-          </>
-        )}
-      </svg>
-    </div>
-  )
-}
-
 const StatusBadge = ({ project }) => (
   <div className="flex flex-wrap items-center gap-2">
+    <span className="rounded-full border border-series/40 bg-series/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-series">
+      {project.category}
+    </span>
     {project.status === 'live' && (
-      <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-300/40 bg-cyan-400/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-neon-cyan">
-        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-neon-cyan" />
+      <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-white/70">
+        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-series" />
         Live
-      </span>
-    )}
-    {project.status === 'in-development' && (
-      <span className="rounded-full border border-white/15 bg-white/5 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-muted">
-        In development
       </span>
     )}
     {project.disclaimer && (
@@ -95,7 +28,7 @@ const ProjectActions = ({ project }) => (
         href={project.liveUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="btn-primary px-4 py-2 text-sm"
+        className="btn-primary px-4 py-2 text-xs"
       >
         View Live
       </a>
@@ -106,7 +39,7 @@ const ProjectActions = ({ project }) => (
         href={link.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="btn-secondary px-4 py-2 text-sm"
+        className="btn-ghost px-4 py-2 text-xs"
       >
         {link.label}
       </a>
@@ -116,7 +49,7 @@ const ProjectActions = ({ project }) => (
         href={project.githubUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="btn-secondary inline-flex items-center gap-2 px-4 py-2 text-sm"
+        className="btn-ghost inline-flex items-center gap-2 px-4 py-2 text-xs"
       >
         <GitHubIcon className="h-4 w-4" />
         Source
@@ -126,47 +59,43 @@ const ProjectActions = ({ project }) => (
 )
 
 export const ProjectCard = ({ project, featured = false }) => (
-  <article className={`neon-card project-card-3d flex h-full flex-col overflow-hidden ${featured ? 'shadow-neon' : ''}`}>
-    <ProjectArt art={project.art} accent={project.accent} />
-    <div className="flex flex-1 flex-col p-6">
-      <div className="mb-3 flex items-start justify-between gap-3">
-        <h3 className="font-display text-2xl text-white">{project.title}</h3>
-        <StatusBadge project={project} />
-      </div>
-      <p className="mb-5 flex-1 text-sm leading-relaxed text-muted">{project.description}</p>
-      <div className="mb-5 flex flex-wrap gap-2">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[11px] text-muted"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-      <ProjectActions project={project} />
+  <article className={`series-card project-card-3d flex h-full flex-col p-6 ${featured ? 'shadow-series' : ''}`}>
+    <div className="mb-5 flex items-start justify-between gap-3">
+      <StatusBadge project={project} />
+      <span className="series-tag">{project.episode} / 07</span>
     </div>
+    <h3 className="font-display text-2xl text-white">{project.title}</h3>
+    <p className="mb-5 mt-3 flex-1 text-sm leading-relaxed text-muted">{project.description}</p>
+    <div className="mb-5 flex flex-wrap gap-2 border-t border-white/10 pt-4">
+      {project.tags.map((tag) => (
+        <span
+          key={tag}
+          className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-[11px] text-muted"
+        >
+          {tag}
+        </span>
+      ))}
+    </div>
+    <ProjectActions project={project} />
   </article>
 )
 
 const VisualCard = ({ project, featured }) => (
-  <article className={`neon-card project-card-3d overflow-hidden ${featured ? 'shadow-neon' : ''}`}>
-    <ProjectArt art={project.art} accent={project.accent} />
-    <div className="p-5">
-      <div className="mb-2 flex items-start justify-between gap-3">
-        <h3 className="font-display text-2xl text-white">{project.title}</h3>
-        <StatusBadge project={project} />
-      </div>
-      <div className="flex flex-wrap gap-2">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[11px] text-muted"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
+  <article className={`series-card project-card-3d overflow-hidden p-6 ${featured ? 'shadow-series' : ''}`}>
+    <div className="mb-4 flex items-start justify-between gap-3">
+      <StatusBadge project={project} />
+      <span className="series-tag">{project.episode} / 07</span>
+    </div>
+    <h3 className="font-display text-2xl text-white">{project.title}</h3>
+    <div className="mt-4 flex flex-wrap gap-2 border-t border-white/10 pt-4">
+      {project.tags.map((tag) => (
+        <span
+          key={tag}
+          className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-[11px] text-muted"
+        >
+          {tag}
+        </span>
+      ))}
     </div>
   </article>
 )
@@ -199,7 +128,7 @@ const Coverflow = ({ projects }) => {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="relative mx-auto h-[380px] max-w-5xl perspective-[1600px]">
+      <div className="relative mx-auto h-[340px] max-w-5xl" style={{ perspective: '1600px' }}>
         {projects.map((project, index) => {
           const offset = offsetOf(index)
           const abs = Math.abs(offset)
@@ -220,7 +149,7 @@ const Coverflow = ({ projects }) => {
               aria-current={offset === 0 ? 'true' : undefined}
               className="absolute left-1/2 top-4 w-[min(86%,300px)] origin-center cursor-pointer text-left transition-transform duration-500"
               style={{
-                transform: `translateX(-50%) translateX(${offset * 228}px) rotateY(${offset * -38}deg) translateZ(${offset === 0 ? 110 : -70}px) scale(${offset === 0 ? 1.04 : 0.86})`,
+                transform: `translateX(-50%) translateX(${offset * 228}px) rotateY(${offset * -32}deg) translateZ(${offset === 0 ? 110 : -70}px) scale(${offset === 0 ? 1.04 : 0.86})`,
                 zIndex: 20 - abs,
                 opacity: visible ? (abs === 2 ? 0.4 : 1) : 0,
                 pointerEvents: visible ? 'auto' : 'none',
@@ -258,7 +187,7 @@ const Coverflow = ({ projects }) => {
               aria-label={project.title}
               onClick={() => setActive(index)}
               className={`h-2.5 rounded-full transition-all ${
-                index === active ? 'w-8 bg-neon-cyan' : 'w-2.5 bg-white/25 hover:bg-white/50'
+                index === active ? 'w-8 bg-series' : 'w-2.5 bg-white/25 hover:bg-white/50'
               }`}
             />
           ))}
@@ -281,11 +210,17 @@ const Coverflow = ({ projects }) => {
 const Projects = () => {
   return (
     <section id="work" className="relative overflow-x-clip px-5 py-24 md:px-8 md:py-32">
-      <div className="glow-orb left-1/2 top-10 h-72 w-72 -translate-x-1/2 bg-cyan-400/10" />
+      <div className="watermark">
+        <span className="watermark-word">ORIGINATE</span>
+      </div>
+      <div className="glow-orb left-1/2 top-10 h-72 w-72 -translate-x-1/2 bg-series/12" />
       <div className="relative mx-auto max-w-7xl">
-        <div className="mb-10 text-center">
-          <p className="mb-3 font-mono text-xs uppercase tracking-[0.28em] text-muted">Selected work</p>
-          <h2 className="font-display text-5xl italic text-white md:text-7xl">built.</h2>
+        <div className="mb-10">
+          <p className="series-tag mb-5">Episode 04 / Original work</p>
+          <h2 className="font-display text-4xl font-extrabold uppercase leading-[0.92] tracking-[-0.04em] text-white sm:text-6xl md:text-7xl">
+            Original
+            <span className="text-series">.</span>
+          </h2>
         </div>
 
         <Coverflow projects={PROJECTS} />
@@ -309,7 +244,7 @@ const Projects = () => {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/80 underline-offset-4 transition-colors hover:text-neon-cyan hover:underline"
+                  className="text-white/80 underline-offset-4 transition-colors hover:text-series hover:underline"
                 >
                   {project.title}
                 </a>
@@ -319,7 +254,7 @@ const Projects = () => {
           <p className="mt-4">
             <a
               href={`${import.meta.env.BASE_URL}projects.html`}
-              className="text-sm text-neon-cyan underline-offset-4 hover:underline"
+              className="text-sm text-series underline-offset-4 hover:underline"
             >
               Full project directory
             </a>

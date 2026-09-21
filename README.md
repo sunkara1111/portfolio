@@ -2,7 +2,7 @@
 
 **Senior Controls Engineer · Automation Engineer**
 
-Dark cyber portfolio for industrial controls, automation systems, and AI-assisted tools. Opens with a full-viewport percentage loader, then a holographic hero — no portrait photos.
+Netflix Developer Series portfolio — full black, high-contrast white type, and red series accents for industrial controls, automation systems, and AI-assisted tools.
 
 Public branding is the name, role, and GitHub / LinkedIn links only. Do not add “Powered by”, sponsored, or platform HUD badges (GitHub, Netlify, Vercel, or similar).
 

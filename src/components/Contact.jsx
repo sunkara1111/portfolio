@@ -5,13 +5,13 @@ import { GitHubIcon, LinkedInIcon, SocialLinks } from './icons'
 const Contact = () => {
   return (
     <section id="contact" className="relative px-5 py-24 md:px-8 md:py-32">
-      <div className="glow-orb right-10 top-10 h-72 w-72 bg-violet-600/16" />
+      <div className="glow-orb right-10 top-10 h-72 w-72 bg-series/15" />
       <div className="relative mx-auto max-w-4xl text-center">
-        <p className="mb-4 font-mono text-xs uppercase tracking-[0.28em] text-neon-cyan">
-          Contact
-        </p>
-        <h2 className="font-display text-4xl leading-tight text-white sm:text-5xl md:text-6xl">
-          Have a process worth automating?
+        <p className="series-tag mb-5">Episode finale / Contact</p>
+        <h2 className="font-display text-4xl font-extrabold uppercase leading-[0.92] tracking-[-0.04em] text-white sm:text-5xl md:text-6xl">
+          Have a process
+          <br />
+          <span className="text-series">worth automating?</span>
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-muted">
           Let&apos;s talk controls, software, and the workflows that should run without you
@@ -19,18 +19,14 @@ const Contact = () => {
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
-          <a
-            href={SITE.resume}
-            download={SITE.resumeFileName}
-            className="btn-primary"
-          >
+          <a href={SITE.resume} download={SITE.resumeFileName} className="btn-primary">
             Download Resume
           </a>
           <a
             href={SITE.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary inline-flex items-center gap-2"
+            className="btn-ghost inline-flex items-center gap-2"
           >
             <LinkedInIcon className="h-5 w-5" />
             LinkedIn
@@ -39,16 +35,16 @@ const Contact = () => {
             href={SITE.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary inline-flex items-center gap-2"
+            className="btn-ghost inline-flex items-center gap-2"
           >
             <GitHubIcon className="h-5 w-5" />
             GitHub
           </a>
         </div>
         <p className="mt-6 text-sm text-muted">
-          <a className="hover:text-neon-cyan" href={`mailto:${SITE.email}`}>{SITE.email}</a>
+          <a className="hover:text-series" href={`mailto:${SITE.email}`}>{SITE.email}</a>
           {' · '}
-          <a className="hover:text-neon-cyan" href={SITE.phoneHref}>{SITE.phone}</a>
+          <a className="hover:text-series" href={SITE.phoneHref}>{SITE.phone}</a>
         </p>
       </div>
 
@@ -60,7 +56,7 @@ const Contact = () => {
           <div className="flex items-center gap-4">
             <a
               href={`${import.meta.env.BASE_URL}projects.html`}
-              className="text-sm text-muted underline-offset-4 hover:text-neon-cyan hover:underline"
+              className="text-sm text-muted underline-offset-4 hover:text-series hover:underline"
             >
               Live projects
             </a>
