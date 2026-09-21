@@ -80,7 +80,7 @@ const Navigation = () => {
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-black/95 px-6 py-8 lg:hidden">
+        <div className="min-h-[100dvh] border-t border-white/10 bg-black px-6 py-8 lg:hidden">
           <div className="flex flex-col gap-5">
             {NAV_LINKS.map((link) => (
               <a
