@@ -5,7 +5,8 @@ const Expertise = () => {
   return (
     <section id="expertise" className="relative overflow-hidden px-5 py-24 md:px-8 md:py-32">
       <div className="pointer-events-none absolute inset-0">
-        <div className="glow-orb left-1/2 top-10 h-72 w-72 -translate-x-1/2 bg-series/10" />
+        <div className="glow-orb left-1/2 top-10 h-72 w-72 -translate-x-1/2 bg-vibranium/20" />
+        <div className="glow-orb left-10 bottom-10 h-56 w-56 bg-series/10" />
       </div>
 
       <div className="relative mx-auto max-w-7xl">
@@ -13,7 +14,7 @@ const Expertise = () => {
         <h2 className="max-w-5xl font-display text-5xl leading-[0.88] text-white sm:text-7xl md:text-8xl">
           Director&apos;s cut
           <br />
-          <span className="text-series">Technical capabilities.</span>
+          <span className="text-vibranium">Technical capabilities.</span>
         </h2>
         <p className="mt-6 max-w-2xl font-mono text-sm text-muted md:text-[15px]">
           Equipped with industry-grade instruments for robust, scalable control and

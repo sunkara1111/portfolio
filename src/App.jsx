@@ -1,4 +1,5 @@
 import React from 'react'
+import LatticeBackdrop from './components/LatticeBackdrop'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -10,8 +11,9 @@ import Contact from './components/Contact'
 function App() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-black">
+      <LatticeBackdrop />
       <Navigation />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Expertise />

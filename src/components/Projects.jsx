@@ -54,7 +54,7 @@ const ProjectActions = ({ project }) => (
 )
 
 export const ProjectCard = ({ project }) => (
-  <article className="series-card flex h-full flex-col p-6">
+  <article className="series-card lattice-corners flex h-full flex-col p-6">
     <div className="mb-5 flex items-start justify-between gap-3">
       <StatusBadge project={project} />
       <span className="series-tag">SLOT_{project.episode}</span>
@@ -81,15 +81,16 @@ const Projects = () => {
       <div className="watermark">
         <span className="watermark-word">ARCHIVE</span>
       </div>
-      <div className="glow-orb left-1/2 top-10 h-72 w-72 -translate-x-1/2 bg-series/12" />
+      <div className="glow-orb left-1/2 top-10 h-72 w-72 -translate-x-1/2 bg-vibranium/18" />
+      <div className="glow-orb right-0 bottom-20 h-56 w-56 bg-royal/20" />
       <div className="relative mx-auto max-w-7xl">
         <p className="series-tag mb-5">Episode 03 / Showcase</p>
-        <div className="mb-12 border border-series/70 bg-black/60 px-5 py-6 sm:px-8">
+        <div className="mb-12 border border-vibranium/60 bg-black/60 px-5 py-6 sm:px-8">
           <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-series">Archive_slots</p>
           <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
             <h2 className="font-display text-5xl leading-[0.88] text-white sm:text-7xl md:text-8xl">
               Showcase
-              <span className="text-series">.</span>
+              <span className="text-vibranium">.</span>
             </h2>
             <p className="font-mono text-xs uppercase tracking-[0.22em] text-white/50">
               {String(PROJECTS.length).padStart(2, '0')} entries // live systems

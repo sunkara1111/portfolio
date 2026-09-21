@@ -12,8 +12,9 @@ const Hero = () => {
   return (
     <section id="top" className="relative flex min-h-screen items-center overflow-hidden px-5 pb-20 pt-32 md:px-8 md:pt-36">
       <div className="pointer-events-none absolute inset-0">
-        <div className="glow-orb right-[8%] top-24 h-80 w-80 bg-series/25" />
-        <div className="glow-orb -left-16 bottom-10 h-64 w-64 bg-series/10" />
+        <div className="glow-orb right-[8%] top-24 h-80 w-80 bg-vibranium/30" />
+        <div className="glow-orb -left-16 bottom-10 h-64 w-64 bg-series/15" />
+        <div className="glow-orb left-1/3 top-10 h-56 w-56 bg-royal/25" />
       </div>
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
@@ -53,7 +54,8 @@ const Hero = () => {
         </div>
 
         <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
-          <div className="absolute -inset-8 rounded-[2rem] bg-series/20 blur-3xl" />
+          <div className="absolute -inset-8 rounded-[2rem] bg-vibranium/25 blur-3xl" />
+          <div className="absolute -inset-4 rounded-[2rem] bg-series/10 blur-2xl" />
           <PortraitTilt className="relative mx-auto max-w-[340px] lg:max-w-[380px]">
             <figure className="portrait-frame mx-auto aspect-[3/4]">
               <p className="absolute left-4 top-4 z-10 rounded-sm border border-series bg-black/70 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-series">

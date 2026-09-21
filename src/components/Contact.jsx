@@ -21,7 +21,8 @@ const Contact = () => {
 
   return (
     <section id="contact" className="relative px-5 py-24 md:px-8 md:py-32">
-      <div className="glow-orb right-10 top-10 h-72 w-72 bg-series/15" />
+      <div className="glow-orb right-10 top-10 h-72 w-72 bg-vibranium/20" />
+      <div className="glow-orb left-10 bottom-10 h-56 w-56 bg-series/10" />
       <div className="relative mx-auto max-w-3xl">
         <p className="series-tag mb-5">Episode finale / Contact</p>
         <h2 className="font-display text-5xl leading-[0.88] text-white sm:text-7xl">
@@ -35,7 +36,7 @@ const Contact = () => {
 
         <form
           onSubmit={onSubmit}
-          className="mt-10 border border-series bg-black/80 p-5 md:p-8"
+          className="mt-10 border border-series bg-black/80 p-5 shadow-lattice md:p-8"
           aria-label="Contact terminal"
         >
           <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.22em] text-series">
@@ -115,7 +116,7 @@ const Contact = () => {
         </p>
       </div>
 
-      <footer className="relative mx-auto mt-20 max-w-7xl border-t border-series/30 pt-8">
+      <footer className="relative mx-auto mt-20 max-w-7xl border-t border-vibranium/30 pt-8">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="font-mono text-sm text-muted">
             © {new Date().getFullYear()} {SITE.name} · {SITE.title}
