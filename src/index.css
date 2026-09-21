@@ -254,7 +254,10 @@
   object-fit: cover;
 }
 
-.portrait-img-hero,
+.portrait-img-hero {
+  object-position: 50% 12%;
+}
+
 .portrait-img-about {
   object-position: 50% 18%;
 }
