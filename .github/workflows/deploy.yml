@@ -34,6 +34,11 @@ jobs:
         
       - name: Build
         run: npm run build
+
+      - name: Verify Pages CNAME
+        run: |
+          test -f dist/CNAME
+          grep -qx 'portfolio.sunkaraops.com' dist/CNAME
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

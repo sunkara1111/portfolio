@@ -134,6 +134,11 @@ export const ProjectCard = ({ project, featured = false }) => (
         <StatusBadge project={project} />
       </div>
       <p className="mb-5 flex-1 text-sm leading-relaxed text-muted">{project.description}</p>
+      {project.upcomingHost && (
+        <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.16em] text-white/45">
+          Custom domain soon: {project.upcomingHost}
+        </p>
+      )}
       <div className="mb-5 flex flex-wrap gap-2">
         {project.tags.map((tag) => (
           <span
@@ -234,6 +239,11 @@ const Coverflow = ({ projects }) => {
 
       <div className="mx-auto mt-4 max-w-2xl text-center">
         <p className="text-muted">{current.description}</p>
+        {current.upcomingHost && (
+          <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.16em] text-white/45">
+            Custom domain soon: {current.upcomingHost}
+          </p>
+        )}
         <div className="mt-5 flex justify-center">
           <ProjectActions project={current} />
         </div>

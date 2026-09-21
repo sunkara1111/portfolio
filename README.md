@@ -8,11 +8,15 @@ Public branding is the name, role, and GitHub / LinkedIn links only. Do not add 
 
 ## Live Site
 
+**https://portfolio.sunkaraops.com/** (GitHub Pages custom domain)
+
+GitHub Pages project URL (stays available; GitHub redirects it to the custom domain after DNS / HTTPS verify):
+
 **https://sunkara1111.github.io/portfolio/**
 
 - GitHub: [github.com/sunkara1111](https://github.com/sunkara1111)
 - LinkedIn: [linkedin.com/in/sunkara-dineshgopi-86464919b](https://www.linkedin.com/in/sunkara-dineshgopi-86464919b)
-- Resume: [Latest resume (PDF)](https://sunkara1111.github.io/portfolio/resume.pdf)
+- Resume: [Latest resume (PDF)](https://portfolio.sunkaraops.com/resume.pdf)
 
 ## Tech Stack
 
@@ -24,8 +28,8 @@ Public branding is the name, role, and GitHub / LinkedIn links only. Do not add 
 
 ## Featured Projects
 
-1. **Pilot** — Communication and productivity hub ([Live](https://get-pilot-app.netlify.app/) | [Reply](https://get-pilot-app.netlify.app/tools/reply) | [GitHub](https://github.com/sunkara1111/pilot))
-2. **StatusPass** — F-1 / CPT / OPT / STEM OPT organizer ([Live](https://statuspass-web.vercel.app/) | [GitHub](https://github.com/sunkara1111/statuspass))
+1. **Pilot** — Communication and productivity hub ([Live](https://get-pilot-app.netlify.app/) | [Reply](https://get-pilot-app.netlify.app/tools/reply) | [GitHub](https://github.com/sunkara1111/pilot)). Custom domain soon: `pilot.sunkaraops.com`
+2. **StatusPass** — F-1 / CPT / OPT / STEM OPT organizer ([Live](https://statuspass-web.vercel.app) | [GitHub](https://github.com/sunkara1111/statuspass)). Custom domain soon: `statuspass.sunkaraops.com`
 3. **AdForge** — AI-powered advertising platform ([Live](https://adforge-sunkara.vercel.app/))
 4. **DGS AI** — Intelligent assistant platform ([Live](https://sunkara1111.github.io/dgs-ai/) | [GitHub](https://github.com/sunkara1111/dgs-ai))
 5. **AI Fund** — Experimental hedge fund research ([Live](https://sunkara1111.github.io/ai-hedge-fund/) | [GitHub](https://github.com/sunkara1111/ai-hedge-fund))
@@ -34,16 +38,38 @@ Public branding is the name, role, and GitHub / LinkedIn links only. Do not add 
 
 ## Custom domain (GitHub Pages)
 
-No hostname is set yet. When a real domain is ready, do not invent one — use the owner’s domain and this checklist:
+Hostname: **portfolio.sunkaraops.com**
 
-1. Copy `CNAME.example` to `public/CNAME` and put **only** the real hostname on one line (no `https://`, no path).
-2. DNS:
-   - `www` (or another subdomain): CNAME → `sunkara1111.github.io`
-   - Apex (`@`): A records to GitHub Pages (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`)
-3. Repo **Settings → Pages → Custom domain** — paste the same hostname and wait for DNS / HTTPS to check out.
-4. If the site should load at `/` on that domain, change `base` in `vite.config.js` from `'/portfolio/'` to `'/'`.
-5. Update canonical, Open Graph, JSON-LD, `public/sitemap.xml`, and `public/robots.txt` to the new origin.
-6. Do not commit a guessed hostname. Leave `CNAME.example` in place until DNS is actually owned.
+This repo publishes with **GitHub Actions** (not `/docs`). Vite copies `public/` into `dist/`, so the file GitHub Pages reads is `public/CNAME`. A matching `CNAME` is also at the repo root.
+
+### Files
+
+- `CNAME` (repo root) and `public/CNAME` — one line, no protocol, no path:
+
+```
+portfolio.sunkaraops.com
+```
+
+### DNS (owner of sunkaraops.com)
+
+Create a **CNAME** record:
+
+| Host | Type | Value |
+| --- | --- | --- |
+| `portfolio` | CNAME | `sunkara1111.github.io` |
+
+Do not point this hostname at Netlify or Vercel. Apex (`sunkaraops.com`) is not used for this site.
+
+### GitHub Pages setting
+
+1. Repo **Settings → Pages**.
+2. **Custom domain**: `portfolio.sunkaraops.com` (GitHub often fills this from the published `CNAME` after the next deploy to `main`).
+3. Wait for DNS check to pass, then keep **Enforce HTTPS** on.
+4. Publishing source stays **GitHub Actions**.
+
+`vite.config.js` uses a relative `base` (`./`) so assets resolve both at `https://sunkara1111.github.io/portfolio/` and at the custom-domain root. Canonical, Open Graph, JSON-LD, `public/sitemap.xml`, and `public/robots.txt` use `https://portfolio.sunkaraops.com/`.
+
+Until DNS is live, the GitHub Pages URL continues to serve the site.
 
 ## Development
 
