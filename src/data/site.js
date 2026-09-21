@@ -17,7 +17,6 @@ export const SITE = {
   phone: '201-284-1559',
   phoneHref: 'tel:+12012841559',
   siteUrl: 'https://sunkara1111.github.io/portfolio/',
-  customDomainHost: 'portfolio.sunkaraops.com',
   portrait: `${import.meta.env.BASE_URL}portrait-hero.jpg`,
   portraitAbout: `${import.meta.env.BASE_URL}portrait-about.jpg`,
   resume: `${import.meta.env.BASE_URL}resume.pdf`,
