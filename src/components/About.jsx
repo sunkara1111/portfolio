@@ -20,7 +20,7 @@ const About = () => {
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
           <article className="series-card p-7 md:p-9">
-            <p className="series-tag">Bio &amp; necessary</p>
+            <p className="series-tag">Biography</p>
             <p className="mt-5 text-lg leading-relaxed text-white/80">
               I&apos;m {SITE.name}, an Automation Engineer at {current.company} in Spokane, WA,
               with an {SITE.education} from {SITE.university}. I work across industrial

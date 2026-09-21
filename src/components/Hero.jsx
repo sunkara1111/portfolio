@@ -52,7 +52,7 @@ const Hero = () => {
                 alt={`${SITE.name}, ${SITE.shortTitle}`}
                 width="1206"
                 height="2144"
-                className="h-full w-full object-cover object-[center_10%]"
+                className="h-full w-full origin-[center_8%] scale-[1.7] object-cover object-[center_8%]"
               />
             </figure>
           </PortraitTilt>
