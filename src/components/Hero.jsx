@@ -32,24 +32,32 @@ const Hero = () => {
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80 md:text-xl">
             {SITE.tagline}
           </p>
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center sm:flex-wrap">
             <a href="#work" className="btn-primary uppercase tracking-[0.14em]">
               View my work
+            </a>
+            <a
+              href={SITE.resume}
+              download={SITE.resumeFileName}
+              className="btn-secondary uppercase tracking-[0.14em]"
+            >
+              {SITE.resumeLabel}
             </a>
             <a href="#contact" className="text-link px-1">
               Let&apos;s talk
             </a>
           </div>
           <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-            <a href={SITE.resume} download={SITE.resumeFileName} className="hover:text-series">
-              {SITE.resumeLabel}
-            </a>
-            {' · currently working'}
+            Currently working · Jubilant HollisterStier
           </p>
         </div>
 
         <div className="relative mx-auto w-full max-w-[560px]">
-          <CinematicPortrait src={SITE.portrait} alt={`${SITE.name} — cinematic portrait`} />
+          <CinematicPortrait
+            src={SITE.portrait}
+            alt={`${SITE.name}, full-body Brooklyn Bridge night portrait`}
+            priority
+          />
 
           <div className="hud-panel absolute -left-3 top-[4%] z-10 hidden w-[42%] p-3 animate-float sm:block sm:-left-16">
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-series">Featured</p>

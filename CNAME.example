@@ -1,7 +1,5 @@
 # GitHub Pages custom-domain template.
-# Do not invent a hostname. When the real domain is ready:
-#   1. Copy this file to public/CNAME
-#   2. Replace the placeholder line with only that hostname (no protocol, no path)
-#   3. Follow the checklist in README.md
+# Live hostname is in public/CNAME (copied into the Pages artifact on build).
+# Registrar DNS cannot be set from this repo — see README.md.
 #
-# YOUR-DOMAIN.EXAMPLE
+# portfolio.sunkaraops.com
