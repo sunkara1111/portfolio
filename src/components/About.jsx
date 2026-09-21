@@ -38,7 +38,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md">
+        <div className="relative mx-auto w-full max-w-md sm:px-8">
           {ABOUT_ORBITS.map((orbit) => (
             <span
               key={orbit.label}

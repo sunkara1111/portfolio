@@ -201,8 +201,8 @@ export const SKILLS = [
 ]
 
 export const ABOUT_ORBITS = [
-  { label: 'PLC / SCADA', className: 'top-6 -left-3 sm:-left-10' },
-  { label: 'Automation', className: 'top-1/4 -right-4 sm:-right-12' },
-  { label: 'AI Tools', className: 'bottom-24 -left-2 sm:-left-8' },
-  { label: 'MES', className: 'bottom-10 -right-3 sm:-right-10' },
+  { label: 'PLC / SCADA', className: 'top-3 -left-8 sm:-left-20' },
+  { label: 'Automation', className: 'top-1/4 -right-8 sm:-right-20' },
+  { label: 'AI Tools', className: 'bottom-28 -left-6 sm:-left-16' },
+  { label: 'MES', className: 'bottom-8 -right-6 sm:-right-16' },
 ]
