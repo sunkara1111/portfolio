@@ -1,5 +1,6 @@
 import React from 'react'
 import { ABOUT_ORBITS, EDUCATION, EXPERIENCE, SITE } from '../data/site'
+import CinematicPortrait from './CinematicPortrait'
 
 const facts = [
   { label: 'Current role', value: `${EXPERIENCE[0].role} · ${EXPERIENCE[0].company}` },
@@ -38,7 +39,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md sm:px-8">
+        <div className="relative mx-auto w-full max-w-md sm:px-10">
           {ABOUT_ORBITS.map((orbit) => (
             <span
               key={orbit.label}
@@ -47,32 +48,11 @@ const About = () => {
               {orbit.label}
             </span>
           ))}
-          <div className="hud-panel overflow-hidden p-8">
-            <div className="mb-6 flex items-center justify-between">
-              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-series">
-                Profile
-              </span>
-              <span className="h-2 w-2 rounded-full bg-series shadow-[0_0_12px_#E50914]" />
-            </div>
-            <p className="font-display text-4xl leading-none text-white">
-              {SITE.firstName}
-              <br />
-              {SITE.lastName}.
-            </p>
-            <p className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-white/70">
-              {SITE.title}
-            </p>
-            <div className="mt-8 grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Now</p>
-                <p className="mt-1 text-sm text-white">{EXPERIENCE[0].company}</p>
-              </div>
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-wider text-muted">School</p>
-                <p className="mt-1 text-sm text-white">{SITE.university} · MS</p>
-              </div>
-            </div>
-          </div>
+          <CinematicPortrait
+            src={SITE.portraitAbout}
+            alt={`${SITE.name} portrait`}
+            crop="about"
+          />
         </div>
       </div>
 
