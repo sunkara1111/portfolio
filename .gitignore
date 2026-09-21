@@ -29,6 +29,8 @@ dist-ssr/
 
 # Testing
 coverage/
+__pycache__/
+*.pyc
 
 # Misc
 *.log
