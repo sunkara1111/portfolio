@@ -24,13 +24,16 @@ export const SITE = {
 }
 
 export const SERIES = {
-  label: 'NETFLIX DEVELOPER SERIES',
+  label: 'NETFLIX SIMULATED SERIES',
   seasons: 'SEASONS 2019 — 2026',
   wordmark: 'SUNKARA',
-  roleLine: 'AUTO.ENGINE',
+  roleLine: 'DEV.ENGINE',
+  badgeTop: 'TOP 1%',
   badge: 'AUTOMATION ENGINEER & PROBLEM SOLVER',
   chips: ['React', 'Node.js', 'Python', 'Ignition', 'PLC'],
-  engineered: 'ENGINEERED FOR RELIABILITY',
+  engineered: 'ENGINEERED FOR SCALABILITY',
+  version: 'PORTFOLIO.CINEMATIC // v2.0.26',
+  featureLabel: 'FEATURE 01',
 }
 
 export const NAV_LINKS = [
