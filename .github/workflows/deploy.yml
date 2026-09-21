@@ -48,16 +48,6 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Clear Pages custom domain
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # A published CNAME file 301s github.io to that host. This site must
-          # stay on https://sunkara1111.github.io/portfolio/ until DNS exists.
-          # Removing public/CNAME is not enough — Pages keeps the setting.
-          gh api --method PUT "repos/${GITHUB_REPOSITORY}/pages" --input - <<'EOF'
-          {"cname":null,"build_type":"workflow"}
-          EOF
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

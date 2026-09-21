@@ -34,7 +34,7 @@ Public branding is the name, role, and GitHub / LinkedIn links only. Do not add 
 
 ## Custom domain (DNS only)
 
-Do **not** add a `CNAME` file or GitHub Pages custom domain in this repo. Publishing `public/CNAME` makes Pages **301** `https://sunkara1111.github.io/portfolio/` to that hostname. If DNS is missing (NXDOMAIN), the live site goes down.
+**Do not add a `CNAME` file.** Publishing `public/CNAME` makes GitHub Pages **301** `https://sunkara1111.github.io/portfolio/` to that hostname. If DNS is NXDOMAIN, the live site goes down. This token cannot clear **Settings → Pages → Custom domain**; a repo admin must remove `portfolio.sunkaraops.com` there if github.io is still redirecting.
 
 This repo cannot buy a domain or change registrar DNS. Vite `base` stays **`/portfolio/`**.
 
