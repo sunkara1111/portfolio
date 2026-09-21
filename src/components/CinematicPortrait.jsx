@@ -14,8 +14,8 @@ const CinematicPortrait = ({
         <img
           src={src}
           alt={alt}
-          width={crop === 'about' ? 3024 : 1206}
-          height={crop === 'about' ? 4032 : 1507}
+          width={crop === 'about' ? 1206 : 3024}
+          height={crop === 'about' ? 1507 : 4032}
           fetchPriority={priority ? 'high' : 'auto'}
           className={crop === 'about' ? 'portrait-img portrait-img-about' : 'portrait-img portrait-img-hero'}
         />

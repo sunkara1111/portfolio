@@ -55,7 +55,7 @@ const Hero = () => {
         <div className="relative mx-auto w-full max-w-[560px]">
           <CinematicPortrait
             src={SITE.portrait}
-            alt={`${SITE.name}, full-body Brooklyn Bridge night portrait`}
+            alt={`${SITE.name} in a black overcoat at night`}
             priority
           />
 
