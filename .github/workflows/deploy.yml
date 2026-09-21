@@ -31,10 +31,16 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
-        
+
+      - name: Forbid Pages CNAME (keeps github.io from 301ing)
+        run: bash scripts/check-pages.sh
+
       - name: Build
         run: npm run build
-        
+
+      - name: Forbid CNAME in the published artifact
+        run: bash scripts/check-pages.sh
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -51,3 +57,14 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # Read-only. Clearing cname requires repo admin; GITHUB_TOKEN gets 403.
+      - name: Warn if Pages still has a custom domain
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cname="$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '.cname // empty' || true)"
+          echo "Pages cname=${cname:-<none>}"
+          if [ -n "${cname}" ]; then
+            echo "::warning::GitHub Pages custom domain is still '${cname}'. https://sunkara1111.github.io/portfolio/ will 301 there until a repo admin clicks Remove at Settings → Pages → Custom domain (or runs bash scripts/clear-pages-custom-domain.sh with an admin token)."
+          fi
