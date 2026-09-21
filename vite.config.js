@@ -3,10 +3,9 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  // Relative asset URLs keep https://sunkara1111.github.io/portfolio/ working.
-  // When portfolio.sunkaraops.com DNS exists, copy docs/CNAME.example to CNAME
-  // and public/CNAME — the same build will also work at the custom-domain root.
-  base: './',
+  // GitHub Pages project site. Keep /portfolio/ so https://sunkara1111.github.io/portfolio/ loads.
+  // Do not publish a CNAME file; it 301s github.io to the custom domain.
+  base: '/portfolio/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
