@@ -11,8 +11,8 @@ const Hero = () => {
         <div className="scanlines absolute inset-0" />
         <div className="neon-bar left-[8%] top-0 hidden h-full w-px opacity-70 md:block" />
         <div className="neon-bar-pink right-[11%] top-16 hidden h-[70%] w-px opacity-50 md:block" />
-        <div className="glow-orb -left-24 top-16 h-80 w-80 bg-cyan-400/15" />
-        <div className="glow-orb bottom-0 right-0 h-96 w-96 bg-violet-600/18" />
+        <div className="glow-orb -left-24 top-16 h-80 w-80 bg-cyan-400/25" />
+        <div className="glow-orb bottom-0 right-0 h-96 w-96 bg-violet-600/28" />
       </div>
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
