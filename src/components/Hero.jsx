@@ -59,21 +59,36 @@ const Hero = () => {
             priority
           />
 
-          <div className="hud-panel absolute -left-3 top-[4%] z-10 hidden w-[42%] p-3 animate-float sm:block sm:-left-16">
+          <a
+            href={featured[0].liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hud-panel absolute -left-3 top-[4%] z-10 hidden w-[42%] p-3 animate-float no-underline sm:block sm:-left-16"
+          >
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-series">Featured</p>
             <p className="mt-1 font-display text-lg text-white">{featured[0].title}</p>
             <p className="mt-1 text-[11px] text-muted">{featured[0].tags.slice(0, 2).join(' · ')}</p>
-          </div>
-          <div className="hud-panel absolute -right-2 top-[22%] z-10 hidden w-[38%] p-3 animate-float [animation-delay:1s] sm:block sm:-right-14">
+          </a>
+          <a
+            href={featured[1].liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hud-panel absolute -right-2 top-[22%] z-10 hidden w-[38%] p-3 animate-float no-underline [animation-delay:1s] sm:block sm:-right-14"
+          >
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-vibranium">Live</p>
             <p className="mt-1 font-display text-lg text-white">{featured[1].title}</p>
             <p className="mt-1 text-[11px] text-muted">{featured[1].tags.slice(0, 2).join(' · ')}</p>
-          </div>
-          <div className="hud-panel absolute bottom-[4%] left-0 z-10 w-[48%] p-3 animate-float [animation-delay:1.8s] sm:-left-8">
+          </a>
+          <a
+            href={featured[2].liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hud-panel absolute bottom-[4%] left-0 z-10 w-[48%] p-3 animate-float no-underline [animation-delay:1.8s] sm:-left-8"
+          >
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-royal">Systems</p>
             <p className="mt-1 font-display text-lg text-white">{featured[2].title}</p>
             <p className="mt-1 text-[11px] text-muted">{featured[2].tags.slice(0, 2).join(' · ')}</p>
-          </div>
+          </a>
         </div>
       </div>
 

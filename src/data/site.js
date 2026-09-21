@@ -93,6 +93,7 @@ export const PROJECTS = [
     liveUrl: 'https://get-pilot-app.netlify.app/',
     extraLinks: [{ label: 'Reply tool', href: 'https://get-pilot-app.netlify.app/tools/reply' }],
     githubUrl: 'https://github.com/sunkara1111/pilot',
+    upcomingHost: 'pilot.sunkaraops.com',
     status: 'live',
     accent: 'from-series/80 via-rose-900 to-[#120408]',
     art: 'pulse',
@@ -103,8 +104,9 @@ export const PROJECTS = [
     description:
       'F-1 / CPT / OPT / STEM OPT compliance organizer for international students in the United States. Tracks visa and work-authorization clocks so the next action is clear.',
     tags: ['F-1', 'CPT', 'OPT', 'STEM OPT'],
-    liveUrl: 'https://statuspass-web.vercel.app/',
+    liveUrl: 'https://statuspass-web.vercel.app',
     githubUrl: 'https://github.com/sunkara1111/statuspass',
+    upcomingHost: 'statuspass.sunkaraops.com',
     status: 'live',
     disclaimer: 'Not a law firm or DSO',
     accent: 'from-violet-500/80 via-fuchsia-800 to-[#080410]',

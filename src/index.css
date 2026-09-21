@@ -57,10 +57,14 @@
   }
 
   .hud-panel {
-    @apply relative rounded-xl border border-series/35 bg-black/55 backdrop-blur-md;
+    @apply relative block rounded-xl border border-series/35 bg-black/55 backdrop-blur-md;
     box-shadow:
       0 0 0 1px rgba(168, 85, 247, 0.14),
       0 0 48px rgba(91, 33, 182, 0.22);
+  }
+
+  a.hud-panel:hover {
+    border-color: rgba(229, 9, 20, 0.7);
   }
 
   .hud-panel::before,
